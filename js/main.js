@@ -32,25 +32,7 @@ $(document).ready(function () {
         $('.header__overlay').removeClass('active');
     });
 
-    // show notifications
-    $('.action--alerts').click(function () {
-        $('.alerts-dropdown').toggleClass('active');
-    })
 
-    $('.alerts-dropdown__close').click(function () {
-        $('.alerts-dropdown').removeClass('active');
-    })
-
-    $('.show-alerts__btn').click(function () {
-        $(this).parents('.alerts__box').find('.alerts-wrap').toggle();
-    })
-
-    $(document).click(function (event) {
-        let $target = $(event.target);
-        if (!$target.closest('.alerts-dropdown').length && !$target.closest('.action--alerts').length) {
-            $('.alerts-dropdown').removeClass('active');
-        }
-    });
 
 
 
