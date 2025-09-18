@@ -380,6 +380,15 @@ input[type=password]::-ms-clear {
 
 }
 
+@media(max-width:991.8px) {
+    .back-link {
+        position: relative;
+        left: 0;
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+}
+
 @media(max-width:767.8px) {
     .auth-section {
         max-width: 400px;
@@ -424,7 +433,7 @@ input[type=password]::-ms-clear {
 
 @media(max-width:575.8px) {
     .auth-section {
-        max-width: 320px;
+        max-width: 360px;
         border-radius: 16px;
     }
 
