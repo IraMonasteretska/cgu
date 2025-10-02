@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forget password</title>
+    <title>Registration</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.css">
@@ -92,46 +92,29 @@
         <main class="main">
             <section class="auth-wrapper">
                 <div class="container position-relative">
-                    <a href="login.html" class="back-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M15.7501 18.75L9.00012 12L15.7501 5.25" stroke="#313131" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Back to login
-                    </a>
-                    <div class="auth-section forget-pass">
-                        <div class="auth-section__header">
+                    <div class="auth-section auth-section_registration">
+                        <div class="registration-success">
+                            <img class="registration-success__img" src="img/auth/success-check.svg" alt="img">
                             <h4>
-                                Forget your password?
+                                Your account has been successfully created!
                             </h4>
                             <p>
-                                Don’t worry, happens to all of us. Enter your email below to recover your password
+                                A <span>confirmation</span> has been sent to the provided <span>email address</span>.<br>
+                                If you have not received it within the hour, please <a href="#">contact us</a>.
                             </p>
-                        </div>
-                        <form action="#" class="auth-form">
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="text" id="email" name="email" placeholder="Email address">
-                                <div class="form-group__alert">Please fill out this field.</div>
-                            </div>
-                            <input type="submit" value="Submit" class="auth-form__submit-btn">
-                            <a href="#" class="auth-form__help">Need help?</a>
-                            <p class="auth-form__divider">OR</p>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <button type="button" class="auth-form__social-btn auth-form__social-btn--google">
-                                        <img src="img/auth/google.svg" alt="icon">
-                                        Sign in with Google
-                                    </button>
+                                    <a href="#" class="white-btn">
+                                        Home
+                                    </a>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="button" class="auth-form__social-btn auth-form__social-btn--facebook">
-                                        <img src="img/auth/facebook.svg" alt="icon">
-                                        Login with facebook
-                                    </button>
+                                    <a href="#" class="btn-blue">
+                                        Choose your Plan
+                                    </a>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </section>

@@ -20,7 +20,6 @@ $(document).ready(function () {
     });
 
     // menu btn
-
     $('.burger').click(function () {
         $('.menu-col').toggleClass('active');
         $('.header__overlay').toggleClass('active');
@@ -31,9 +30,6 @@ $(document).ready(function () {
         $('.menu-col').removeClass('active');
         $('.header__overlay').removeClass('active');
     });
-
-
-
 
 
 })

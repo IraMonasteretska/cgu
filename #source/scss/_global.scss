@@ -9,13 +9,27 @@ $gray-700: #525252;
 $gray-800: #404040;
 $gray-900: #292929;
 
+$gray-300-1: #D2D5DA;
+
+$blue-600: #2563EB;
+
 $brand-color: #3656D2;
 $blue-500: #4285F4;
+$blue-400: #5D79E6;
+
+$green-900: #6D9E07;
 
 $dark-base: #151515;
 
 $danger: #FF0000;
 
+.text-red {
+    color: $danger !important;
+}
+
+.text-blue {
+    color: $brand-color;
+}
 
 :root {
     scroll-behavior: initial;
@@ -78,8 +92,171 @@ h4 {
     font-size: 24px;
 }
 
+.checkbox-field {
+    input {
+        display: none;
+
+        &:checked+label {
+            &::before {
+                border-color: $blue-600;
+                background-color: $blue-600;
+                background-image: url('../img/index/check-icon.svg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 16px;
+            }
+        }
+    }
+
+    label {
+        position: relative;
+        padding-left: 28px;
+        color: #000;
+        font-size: 14px;
+        cursor: pointer;
+
+        span:not(.hide-tablet) {
+            color: $brand-color;
+        }
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $gray-300-1;
+            border-radius: 4px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+
+}
+
+
 @media(max-width:1399.8px) {
     h4 {
         font-size: 21px;
     }
-} 
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 12px;
+    border: none;
+
+    &.d-inline-flex {
+        width: auto;
+    }
+
+    &.btn_white {
+        background: #fff;
+        border: 1px solid #5353E8;
+        color: $brand-color;
+    }
+
+    &.btn_blue {
+        background: #5353E8;
+        border: 1px solid #5353E8;
+        color: #fff;
+    }
+
+}
+
+.btn-blue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 54px;
+    font-weight: 500;
+    color: #fff;
+    background: $brand-color;
+    border: none;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &:hover {
+        background: #4285F4;
+    }
+}
+
+.white-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 54px;
+    font-weight: 500;
+    color: $brand-color;
+    background: #fff;
+    border: 1px solid $gray-500;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-decoration: none;
+
+
+    &:hover {
+        background: #fff;
+        border-color: $brand-color;
+    }
+}
+
+.arrlink {
+    color: $brand-color;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    padding-right: 28px;
+    text-decoration: none;
+
+    img {
+        width: 24px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s;
+    }
+
+    &:hover {
+        opacity: 0.8;
+
+        img {
+            transform: translateY(-50%) translateX(5px);
+        }
+    }
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media(max-width:1199.8px) {
+    .hide-tablet {
+        display: none;
+    }
+}

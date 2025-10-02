@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registration</title>
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.css">
@@ -92,55 +92,93 @@
         <main class="main">
             <section class="auth-wrapper">
                 <div class="container position-relative">
-                    <div class="auth-section">
-                        <div class="auth-section__header d-flex flex-wrap align-items-center">
+                    <div class="auth-section auth-section_registration">
+                        <div class="auth-section__header d-flex flex-wrap align-items-start">
                             <div class="auth-title">
                                 <h4>
-                                    Account Sign-In
+                                    Account Registration
                                 </h4>
+                                <p class="text-red">* Required fields</p>
                             </div>
                             <div class="auth-switch">
-                                <span>No Account?</span>
-                                <a href="registration.html" class="auth-switch__link">Sign up</a>
+                                <span>Have the Account ?</span>
+                                <a href="login.html" class="auth-switch__link">Log in</a>
                             </div>
                         </div>
                         <form action="#" class="auth-form">
-                            <div class="form-group">
-                                <label for="username">Enter your username or email address</label>
-                                <input type="text" id="username" name="username"
-                                    placeholder="Username or email address">
-                                <div class="form-group__alert">Please fill out this field.</div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Enter your Password</label>
-                                <div class="form-group__input-wrap">
-                                    <input type="password" id="password" name="password" placeholder="Password">
-                                    <button type="button" class="form-group__toggle-password"
-                                        aria-label="Show password">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
-                                            viewBox="0 0 19 19" fill="none">
-                                            <path
-                                                d="M18.8792 9.13021C18.7095 8.89802 14.6652 3.44482 9.49991 3.44482C4.33461 3.44482 0.290122 8.89802 0.120569 9.12999C-0.0401895 9.35027 -0.0401895 9.64904 0.120569 9.86932C0.290122 10.1015 4.33461 15.5547 9.49991 15.5547C14.6652 15.5547 18.7095 10.1015 18.8792 9.86951C19.0402 9.64927 19.0402 9.35027 18.8792 9.13021ZM9.49991 14.302C5.69511 14.302 2.39976 10.6826 1.42426 9.49934C2.39849 8.31507 5.68695 4.69757 9.49991 4.69757C13.3045 4.69757 16.5996 8.31633 17.5756 9.5002C16.6013 10.6844 13.3129 14.302 9.49991 14.302Z"
-                                                fill="#8E8E8E" />
-                                            <path
-                                                d="M9.49996 5.7417C7.42769 5.7417 5.7417 7.42769 5.7417 9.49996C5.7417 11.5722 7.42769 13.2582 9.49996 13.2582C11.5722 13.2582 13.2582 11.5722 13.2582 9.49996C13.2582 7.42769 11.5722 5.7417 9.49996 5.7417ZM9.49996 12.0054C8.11837 12.0054 6.99448 10.8815 6.99448 9.49996C6.99448 8.11841 8.11841 6.99448 9.49996 6.99448C10.8815 6.99448 12.0054 8.11841 12.0054 9.49996C12.0054 10.8815 10.8815 12.0054 9.49996 12.0054Z"
-                                                fill="#8E8E8E" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="form-group__alert">Please fill out this field.</div>
-                            </div>
-                            <div
-                                class="form-group__options d-flex flex-wrap justify-content-between align-items-center">
-                                <div class="form-group__checkbox">
-                                    <input type="checkbox" id="remember" name="remember">
-                                    <label for="remember">Remember me</label>
-                                </div>
-                                <a href="forget-pass.html" class="form-group__forgot">Forgot Password?</a>
-                            </div>
-                            <input type="submit" value="Sign in" class="auth-form__submit-btn">
-                            <p class="auth-form__divider">OR</p>
                             <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="fname">First name <span class="text-red">*</span></label>
+                                        <input type="text" id="fname" name="fname" placeholder="Your first name">
+                                        <div class="form-group__alert" >This field is required.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="lname">Last name <span class="text-red">*</span></label>
+                                        <input type="text" id="lname" name="lname" placeholder="Your last name">
+                                        <div class="form-group__alert">This field is required.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password1">Enter your Password <span class="text-red">*</span></label>
+                                        <div class="form-group__input-wrap">
+                                            <input type="password" id="password1" name="password1"
+                                                placeholder="Password">
+                                            <button type="button" class="form-group__toggle-password"
+                                                aria-label="Show password">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                    viewBox="0 0 19 19" fill="none">
+                                                    <path
+                                                        d="M18.8792 9.13021C18.7095 8.89802 14.6652 3.44482 9.49991 3.44482C4.33461 3.44482 0.290122 8.89802 0.120569 9.12999C-0.0401895 9.35027 -0.0401895 9.64904 0.120569 9.86932C0.290122 10.1015 4.33461 15.5547 9.49991 15.5547C14.6652 15.5547 18.7095 10.1015 18.8792 9.86951C19.0402 9.64927 19.0402 9.35027 18.8792 9.13021ZM9.49991 14.302C5.69511 14.302 2.39976 10.6826 1.42426 9.49934C2.39849 8.31507 5.68695 4.69757 9.49991 4.69757C13.3045 4.69757 16.5996 8.31633 17.5756 9.5002C16.6013 10.6844 13.3129 14.302 9.49991 14.302Z"
+                                                        fill="#8E8E8E" />
+                                                    <path
+                                                        d="M9.49996 5.7417C7.42769 5.7417 5.7417 7.42769 5.7417 9.49996C5.7417 11.5722 7.42769 13.2582 9.49996 13.2582C11.5722 13.2582 13.2582 11.5722 13.2582 9.49996C13.2582 7.42769 11.5722 5.7417 9.49996 5.7417ZM9.49996 12.0054C8.11837 12.0054 6.99448 10.8815 6.99448 9.49996C6.99448 8.11841 8.11841 6.99448 9.49996 6.99448C10.8815 6.99448 12.0054 8.11841 12.0054 9.49996C12.0054 10.8815 10.8815 12.0054 9.49996 12.0054Z"
+                                                        fill="#8E8E8E" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="form-group__alert">This field is required.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="password2">Confirm your Password <span class="text-red">*</span></label>
+                                        <div class="form-group__input-wrap">
+                                            <input type="password" id="password2" name="password2"
+                                                placeholder="Confirm Password">
+                                            <button type="button" class="form-group__toggle-password"
+                                                aria-label="Show password">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                                    viewBox="0 0 19 19" fill="none">
+                                                    <path
+                                                        d="M18.8792 9.13021C18.7095 8.89802 14.6652 3.44482 9.49991 3.44482C4.33461 3.44482 0.290122 8.89802 0.120569 9.12999C-0.0401895 9.35027 -0.0401895 9.64904 0.120569 9.86932C0.290122 10.1015 4.33461 15.5547 9.49991 15.5547C14.6652 15.5547 18.7095 10.1015 18.8792 9.86951C19.0402 9.64927 19.0402 9.35027 18.8792 9.13021ZM9.49991 14.302C5.69511 14.302 2.39976 10.6826 1.42426 9.49934C2.39849 8.31507 5.68695 4.69757 9.49991 4.69757C13.3045 4.69757 16.5996 8.31633 17.5756 9.5002C16.6013 10.6844 13.3129 14.302 9.49991 14.302Z"
+                                                        fill="#8E8E8E" />
+                                                    <path
+                                                        d="M9.49996 5.7417C7.42769 5.7417 5.7417 7.42769 5.7417 9.49996C5.7417 11.5722 7.42769 13.2582 9.49996 13.2582C11.5722 13.2582 13.2582 11.5722 13.2582 9.49996C13.2582 7.42769 11.5722 5.7417 9.49996 5.7417ZM9.49996 12.0054C8.11837 12.0054 6.99448 10.8815 6.99448 9.49996C6.99448 8.11841 8.11841 6.99448 9.49996 6.99448C10.8815 6.99448 12.0054 8.11841 12.0054 9.49996C12.0054 10.8815 10.8815 12.0054 9.49996 12.0054Z"
+                                                        fill="#8E8E8E" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="form-group__alert">Please enter the same value again.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="email">Your Email <span class="text-red">*</span></label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your email">
+                                        <div class="form-group__alert">This field is required.</div>
+                                    </div>
+                                    <div
+                                        class="form-group__options d-flex flex-wrap justify-content-between align-items-center">
+                                        <div class="form-group__checkbox">
+                                            <input type="checkbox" id="remember" name="remember">
+                                            <label for="remember">Yes, I want to receive newsletters</label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <button type="button" class="auth-form__social-btn auth-form__social-btn--google">
                                         <img src="img/auth/google.svg" alt="icon">
@@ -148,10 +186,7 @@
                                     </button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="button" class="auth-form__social-btn auth-form__social-btn--facebook">
-                                        <img src="img/auth/facebook.svg" alt="icon">
-                                        Login with facebook
-                                    </button>
+                                    <input type="submit" value="Create Account" class="btn-blue">
                                 </div>
                             </div>
                         </form>
@@ -192,7 +227,6 @@
             </div>
         </footer>
     </div>
-
 
 
     <script src="js/lib/jquery.js"></script>
