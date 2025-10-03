@@ -1,5 +1,5 @@
 $gray-light: #D9D9D9;
-$gray : #8C8C8C;
+$gray: #8C8C8C;
 $gray-200: #E5E7EB;
 $gray-300: #DCDCDC;
 $gray-400: #ADADAD;
@@ -28,7 +28,11 @@ $danger: #FF0000;
 }
 
 .text-blue {
-    color: $brand-color;
+    color: $brand-color !important;
+}
+
+.text-green {
+    color: $green-900 !important;
 }
 
 :root {
@@ -86,10 +90,26 @@ img {
     max-width: 100%;
 }
 
+
+h2 {
+    font-size: 32px;
+}
+
 h4 {
     color: $dark-base;
     font-weight: 500;
     font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $dark-base;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .checkbox-field {
@@ -137,11 +157,7 @@ h4 {
 }
 
 
-@media(max-width:1399.8px) {
-    h4 {
-        font-size: 21px;
-    }
-}
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -161,6 +177,9 @@ input[type=number] {
     font-weight: 500;
     border-radius: 12px;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &.d-inline-flex {
         width: auto;
@@ -246,17 +265,23 @@ input[type=number] {
     }
 }
 
-h2 {
-    font-size: 32px;
-}
 
-h6 {
-    font-size: 18px;
-    font-weight: 500;
+@media(max-width:1399.8px) {
+    h4 {
+        font-size: 21px;
+    }
 }
 
 @media(max-width:1199.8px) {
     .hide-tablet {
         display: none;
     }
+}
+
+@media(max-width:767.8px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    
 }

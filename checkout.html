@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/select2.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="pagewrapper">
+
+        <header class="header">
+            <div class="container position-relative">
+                <div class="row align-items-center justify-content-md-between">
+                    <div class="col-12">
+                        <!-- logo -->
+                        <div class="header__logo d-flex align-items-center justify-content-center text-center">
+                            <img src="img/header/logo.svg" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <!-- Search -->
+                        <div class="header__search">
+                            <form action="#">
+                                <input type="text" placeholder="Start your search">
+                                <button type="submit" class="search__btn">
+                                    <img src="img/header/search.svg" alt="Search">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 menu-col">
+                        <!-- menu -->
+                        <nav class="header__nav">
+                            <ul class="nav__list text-center">
+                                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Plan Search</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Browse</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Collaborations</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Orders</a></li>
+                            </ul>
+                            <button class="closemenu">
+                                <img src="img/header/close.png" alt="close">
+                            </button>
+                        </nav>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-sm-6 d-sm-flex justify-content-sm-end">
+                        <!-- Actions -->
+                        <div class="header__actions d-flex align-items-center justify-content-end">
+                            <button class="h-action action--alerts">
+                                <div class="imgwrap">
+                                    <img src="img/header/notification.svg" alt="notification">
+                                    <span class="alert-point"></span>
+                                </div>
+                                <p>Alerts</p>
+                            </button>
+                            <a href="#" class="h-action action--favorite">
+                                <div class="imgwrap">
+                                    <img src="img/header/heart.svg" alt="Favorite">
+                                    <span class="alert-badge">3</span>
+                                </div>
+                                <p>Favourite</p>
+                            </a>
+                            <a href="#" class="h-action action--cart">
+                                <div class="imgwrap">
+                                    <img src="img/header/person.svg" alt="notification">
+                                </div>
+                                <p>Profile</p>
+                            </a>
+                            <button class="h-action action--profile action-btn">
+                                <div class="imgwrap">
+                                    <img src="img/header/cart.svg" alt="Cart">
+                                </div>
+                                <p>Cart</p>
+                            </button>
+                            <div class="burger">
+                                <img src="img/header/menu.png" alt="menu">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__overlay"></div>
+        </header>
+
+        <main class="main">
+            <section class="checkout-section">
+                <div class="container">
+                    <div class="checkout-header">
+                        <div class="row align-items-center">
+                            <div class="col-xl-5">
+                                <h2>Secure Plan Order</h2>
+                            </div>
+                            <div class="col-xl-7">
+                                <div class="checkout-progress">
+                                    <p class="check">Order Options</p>
+                                    <p class="check green-text">Order Review</p>
+                                    <p>Secure Checkout</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkout-body">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="checkout-shippinginfo">
+                                    <div class="checkout-shippinginfo__header">
+                                        <h4>Shipping Info</h4>
+                                        <p class="text-red">* required fields</p>
+                                    </div>
+                                    <div class="checkout-shippinginfo__body">
+                                        <form action="#">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="fname">First Name<span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" id="fname" placeholder="Your first name">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="lname">Last Name<span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" id="lname" placeholder="Your last name">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="company">Company</label>
+                                                        <input type="text" id="company" placeholder="Your company">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="suite">Apt/Suite</label>
+                                                        <input type="text" id="suite" placeholder="Your Apt/Suite">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="city">City<span class="text-red">*</span></label>
+                                                        <input type="text" id="city" placeholder="Your city">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="address">Address<span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" id="address" placeholder="Your address">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="state">State<span class="text-red">*</span></label>
+                                                        <input type="text" id="state" placeholder="Your state">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="zipcode">Zip Code<span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" id="zipcode" placeholder="Your Zip Code">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="tel">Phone<span class="text-red">*</span></label>
+                                                        <input type="number" id="tel" placeholder="Your phone">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="email">Your Email<span
+                                                                class="text-red">*</span></label>
+                                                        <input type="email" id="email" placeholder="Your email">
+                                                        <div class="form-group__alert">Please fill out this field.</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="checkout-infosect">
+                                                <p class="text-blue">Our site uses Secure Payment Processing, and all
+                                                    charges will appear as "PHPLANS.COM".</p>
+                                                <div class="checkout-warningtext text-center">
+                                                    <p class="text-red">Please complete all of the required fields to
+                                                        checkout!</p>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="sidebox checkout-sideplans">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                            <h6>Plans: <span>1</span></h6>
+                                        </div>
+                                        <div class="col-md-6 text-sm-end">
+                                            <a href="#" class="arrlink">
+                                                Change Order
+                                                <img src="img/checkout/link-arrow.svg" alt="arrow">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="sidebox-body">
+                                        <div class="checkside__orderinfo">
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <div class="imgwrap">
+                                                        <img src="img/checkout/img.jpg" alt="img">
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <p class="title">A304-B1 :: Mountshire</p>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="description">
+                                                        <p>
+                                                            Please review your order details below before continuing to
+                                                            our
+                                                            secure checkout page for payment processing.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sidebox ordersumm">
+                                    <h5>Order Summary</h5>
+                                    <ul class="summlist">
+                                        <li>
+                                            <p class="title">
+                                                New Package for All Tiers
+                                            </p>
+                                            <p class="price text-green text-end">sale $90.00</p>
+                                        </li>
+                                        <li>
+                                            <p class="title">
+                                                Add this Crawlspace Foundation - 3 Days
+                                            </p>
+                                            <p class="price text-end">$420.00</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="summlist">
+                                        <li>
+                                            <p class="title">
+                                                Sub-Total:
+                                            </p>
+                                            <p class="price text-blue text-end">$510.00</p>
+                                        </li>
+                                        <li>
+                                            <p class="title">
+                                                shipping usa ground
+                                            </p>
+                                            <p class="price text-end">$35.00</p>
+                                        </li>
+                                    </ul>
+                                    <div class="total">
+                                        <p class="title">Order Total:</p>
+                                        <p class="price text-end">$545.00</p>
+                                    </div>
+                                    <textarea name="" id="" placeholder="Message / Special Instructions"></textarea>
+                                    <button class="btn-blue w-100">Checkout</button>
+                                </div>
+                                <div class="support-section">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="support-box">
+                                                <img src="img/checkout/supicon1.svg" alt="icon">
+                                                <p>Have questions about this Plan?</p>
+                                                <a href="#">Ask the Designer</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="support-box">
+                                                <img src="img/checkout/supicon2.svg" alt="icon">
+                                                <p>Have questions about your Order?</p>
+                                                <a href="tel:1-888-995-0852">1-888-995-0852</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-1 col-sm-2">
+                        <div class="footer__logo">
+                            <img src="img/header/logo.svg" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-sm-8">
+                        <div class="footer__content text-center">
+                            <ul class="footer__links d-md-flex justify-content-center align-items-center">
+                                <li>© 2025 All rights reserved.</li>
+                                <li><a href="#" class="footer__link">Your Privacy</a></li>
+                                <li><a href="#" class="footer__link">Terms of use</a></li>
+                            </ul>
+                            <p class="footer__powered">Powered By Portfolio Home Plans, LLC.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-sm-2 d-flex justify-content-md-end justify-content-center">
+                        <a href="#" class="totop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="68" height="69" viewBox="0 0 68 69"
+                                fill="none">
+                                <rect x="0.5" y="1" width="67" height="67" rx="33.5" stroke="#151515" />
+                                <path d="M22 40.5L34 28.5L46 40.5" stroke="black" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.bundle.min.js"></script>
+    <script src="js/lib/select2.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+
+
+</html>
