@@ -31,5 +31,10 @@ $(document).ready(function () {
         $('.header__overlay').removeClass('active');
     });
 
+    // order list - btns
+    $('.sort-btns button').click(function () {
+        $('.sort-btns button').removeClass('active');
+        $(this).addClass('active');
+    })
 
 })
