@@ -220,7 +220,8 @@
                                                             <p class="desct">adadad</p>
                                                         </li>
                                                     </ul>
-                                                    <a href="#" class="highlight__btn">
+                                                    <a href="#" class="highlight__btn" data-bs-toggle="modal"
+                                                        data-bs-target="#askdesigner">
                                                         <img src="img/order/message.svg" alt="icon">
                                                         Ask the Designer
                                                     </a>
@@ -352,7 +353,7 @@
                                     </a>
                                 </div>
                                 <h6>PLAN DESIGNER</h6>
-                                <a href="#" class="highlight__btn">
+                                <a href="#" class="highlight__btn" data-bs-toggle="modal" data-bs-target="#askdesigner">
                                     <img src="img/order/message.svg" alt="icon">
                                     Ask the Designer
                                 </a>
@@ -408,6 +409,76 @@
         </footer>
     </div>
 
+    <div class="modal fade" id="askdesigner" aria-labelledby="exampleModalLabel" aria-hidden="true" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-custwidth">
+            <div class="modal-content">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="img/general/close-modal.svg" alt="close">
+                </button>
+
+                <div class="askthedesigner">
+                    <p class="title">
+                        <img src="img/general/message-icon.svg" alt="icon">
+                        Ask the Designer
+                    </p>
+                    <form action="#">
+                        <div class="form-group">
+                            <textarea placeholder="Enter your question(s) for the designer of this plan..."></textarea>
+                        </div>
+                        <div class="file-drop-area">
+                            <span class="fake-btn">
+                                <img src="img/general/attach.svg" alt="icon">
+                                Drag & drop files here or click to browse
+                            </span>
+                            <span class="file-msg">File attachment . help explain your question</span>
+                            <input class="file-input" type="file" multiple id="attachinput">
+                            <label for="attachinput" class="file-input-label"></label>
+                        </div>
+                        <div class="row explain-box">
+                            <div class="col-sm-6">
+                                <p class="explain-title">Need help explaining?</p>
+                            </div>
+                            <div class="col-sm-6 text-sm-end">
+                                <p class="explain-btn">Use Our Modification Tool</p>
+                            </div>
+                        </div>
+                        <div class="uploadfromtel hide">
+                            <button class="hideblock">
+                                <img src="img/general/close-modal.svg" alt="close">
+                            </button>
+                            <p class="uploadfromtel__title">Upload From Your Phone</p>
+                            <div class="form-group">
+                                <input type="number" id="tel" name="tel" placeholder="Enter your Phone number">
+                                <div class="form-group__alert">This field is required.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-sm-0">
+                                        <select name="" id="" class="styledselect askdesselect" data-placeholder="">
+                                            <!-- <option></option> -->
+                                            <option value="1">T-Mobile</option>
+                                            <option value="2">T-Mobile</option>
+                                            <option value="3">T-Mobile</option>
+                                            <option value="4">T-Mobile</option>
+                                            <option value="5">T-Mobile</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button class="sendlink">Send Upload Link</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-btns d-flex flex-wrap align-items-center justify-content-sm-end justify-content-between">
+                            <a href="#" class="white-btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a href="#" class="btn-blue">Continue</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="js/lib/jquery.js"></script>

@@ -266,6 +266,9 @@ input[type=number] {
     }
 }
 
+.hide {
+    display: none;
+}
 
 @media(max-width:1399.8px) {
     h4 {
@@ -283,6 +286,4 @@ input[type=number] {
     h2 {
         font-size: 26px;
     }
-
-    
 }

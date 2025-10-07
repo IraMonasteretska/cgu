@@ -1,0 +1,341 @@
+.file-drop-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 18px 25px;
+    border: 1px dashed $gray-500;
+    border-radius: 3px;
+    transition: 0.2s;
+    flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 28px;
+
+    &.is-active {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+}
+
+.fake-btn {
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    color: $gray-500;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+
+    img {
+        width: 24px;
+        vertical-align: middle;
+        margin-top: -3px;
+    }
+}
+
+.file-msg {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+    font-weight: 400;
+    font-size: 12px;
+    color: $gray-500;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    display: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.file-input-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.modal-dialog.modal-custwidth {
+    max-width: 580px;
+
+    .modal-content {
+        border: none;
+        padding: 31px 48px 40px 48px;
+        border-radius: 24px;
+    }
+
+    .title {
+        color: $brand-color;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 24px;
+
+        img {
+            max-width: 32px;
+            margin-right: 4px;
+        }
+    }
+}
+
+.form-group textarea {
+    outline: none;
+    width: 100%;
+    height: 100px;
+    border-radius: 9px;
+    border: 1px solid #D9D9D9;
+    padding: 12px 14px;
+    transition: 0.3s;
+    resize: none;
+    vertical-align: top;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    font-size: 14px;
+
+    &:focus {
+        border-color: $blue-500;
+    }
+
+    &:not(:placeholder-shown) {
+        border: 1px solid $dark-base;
+
+        &:focus {
+            border-color: $blue-500;
+        }
+    }
+
+    &:placeholder-shown {
+        border: 1px solid $gray-400;
+
+        &:focus {
+            border-color: $blue-500;
+        }
+    }
+
+    &::placeholder {
+        color: $gray-500;
+    }
+}
+
+.askthedesigner {
+    .form-group {
+        margin-top: 0;
+        margin-bottom: 28px;
+    }
+}
+
+.explain-title {
+    margin: 0;
+    color: #181818;
+    font-weight: 500;
+}
+
+.explain-btn {
+    color: $brand-color;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.close-modal {
+    position: absolute;
+    right: 24px;
+    height: 24px;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    img {
+        width: 24px;
+        vertical-align: top;
+    }
+}
+
+.uploadfromtel {
+    border-radius: 8px;
+    border: 1px solid $gray-light;
+    padding: 16px 14px;
+    position: relative;
+
+    .uploadfromtel__title {
+        margin-bottom: 10px;
+        color: #181818;
+        font-weight: 500;
+        font-size: 16px;
+        padding-right: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+}
+
+.form-group {
+    .select2-container {
+        width: 100% !important;
+    }
+
+    .select2-selection {
+        border: 1px solid $gray-light;
+        height: 48px;
+        border-radius: 8px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        line-height: 48px;
+        font-size: 14px;
+        color: $gray-500;
+        padding-left: 14px;
+    }
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 100%;
+        background: url('../img/general/selectarr.svg') no-repeat center / 16px;
+        right: 14px;
+        transform: rotate(0);
+        transition: 0.3s;
+
+        b {
+            display: none;
+        }
+    }
+
+    .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+        transform: rotate(180deg);
+    }
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background: $brand-color;
+}
+
+.sendlink {
+    height: 48px;
+    border-radius: 12px;
+    background: #2AC7AB;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+        background: #28aa92;
+    }
+}
+
+.modal {
+    .form-group input {
+        height: 48px;
+        font-size: 14px;
+        border-color: $gray-light;
+        padding-left: 14px;
+    }
+}
+
+.modal-btns {
+    margin-top: 20px;
+
+    .white-btn {
+        border-color: $brand-color;
+
+        &:hover {
+            background: rgba($brand-color, 0.1);
+        }
+    }
+
+    .white-btn,
+    .btn-blue {
+        max-width: 165px;
+        flex: 0 0 165px;
+        width: 100%;
+        margin-left: 12px;
+        height: 48px;
+    }
+}
+
+.hideblock {
+    position: absolute;
+    top: 16px;
+    right: 13px;
+    width: 24px;
+
+    img {
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
+@media(max-width:767.8px) {
+    .modal-dialog.modal-custwidth {
+        max-width: 440px;
+    }
+
+    .modal-dialog.modal-custwidth .modal-content {
+        padding: 25px;
+    }
+
+    .modal-dialog.modal-custwidth .title {
+        font-size: 21px;
+        margin-bottom: 15px;
+
+        img {
+            max-width: 24px;
+        }
+    }
+
+    .file-drop-area {
+        padding: 15px 20px;
+        margin-bottom: 15px;
+    }
+
+    .askthedesigner .form-group {
+        margin-bottom: 15px;
+    }
+
+    .explain-btn,
+    .explain-title,
+    .fake-btn,
+    .sendlink {
+        font-size: 14px;
+    }
+
+
+}
+
+@media(max-width:575.8px) {
+    .modal-dialog.modal-custwidth .modal-content {
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    .modal-dialog.modal-custwidth {
+        max-width: 100%;
+    }
+
+    .modal-btns .btn-blue, .modal-btns .white-btn {
+        margin: 0;
+        max-width: calc(50% - 6px);
+        flex: 0 0 calc(50% - 6px);
+    }
+
+
+}
