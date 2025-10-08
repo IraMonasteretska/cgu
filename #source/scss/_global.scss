@@ -14,6 +14,8 @@ $gray-300-1: #D2D5DA;
 $blue-600: #2563EB;
 
 $brand-color: #3656D2;
+$brand-color-2: #E1A900;
+
 $blue-500: #4285F4;
 $blue-400: #5D79E6;
 $neutral-900: #0E1735;
@@ -226,7 +228,7 @@ input[type=number] {
     text-align: center;
     height: 54px;
     font-weight: 500;
-    color: $brand-color;
+    color: $brand-color !important;
     background: #fff;
     border: 1px solid $gray-500;
     transition: 0.3s;
@@ -237,6 +239,14 @@ input[type=number] {
     &:hover {
         background: #fff;
         border-color: $brand-color;
+    }
+
+    &.blue-border {
+        border: 1px solid $brand-color;
+
+        &:hover {
+            background: rgba(54, 86, 210, 0.1);
+        }
     }
 }
 
@@ -286,4 +296,58 @@ input[type=number] {
     h2 {
         font-size: 26px;
     }
+}
+
+.border-brand {
+    border: 1px solid $brand-color;
+}
+
+.color-brand {
+    color: $brand-color;
+}
+
+.color-brand-2 {
+    color: $brand-color-2;
+}
+
+.bg-brand {
+    background: $brand-color;
+}
+
+.bg-brand-2 {
+    background: $brand-color-2;
+}
+
+.border-brand {
+    border: 1px solid $brand-color;
+}
+
+.btn-brand {
+    background: $brand-color;
+    color: #fff;
+    border: 1px solid $brand-color;
+
+    &:hover {
+        border: 1px solid $brand-color;
+        color: $brand-color;
+    }
+}
+
+.h-40 {
+    height: 40px;
+    min-height: initial;
+}
+
+.close-button {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 24px;
+    top: 24px;
+}
+
+.disabled-item {
+    opacity: 0.7;
+    filter: grayscale(1);
+    pointer-events: none;
 }
