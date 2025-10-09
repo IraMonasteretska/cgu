@@ -147,18 +147,18 @@ $(document).ready(function () {
 
 
     // filter 
-    // $('.filter-btn').click(function () {
-    //     $('.plans-bodysect').toggleClass('filter-hide');
-    //     $('.showfilter').toggleClass('show');
+    $('.filter-btn').click(function () {
+        $('.plans-bodysect').toggleClass('filter-hide');
+        $('.showfilter').toggleClass('show');
 
-    //     let $extraBlock = $('#extra-block');
+        let $extraBlock = $('#extra-block');
 
-    //     if ($extraBlock.length) {
-    //         $extraBlock.remove();
-    //     } else {
-    //         $('body').append('<div id="extra-block" class="extra-block"></div>');
-    //     }
-    // });
+        if ($extraBlock.length) {
+            $extraBlock.remove();
+        } else {
+            $('body').append('<div id="extra-block" class="extra-block"></div>');
+        }
+    });
 
     $(document).on('click', '#extra-block', function () {
         $(this).remove();
@@ -244,9 +244,63 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    // show search dropdown
+    $('.save-search__btn').click(function () {
+        $(this).next('.pc-search__dropdown').toggle();
+    })
 
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.save-search__btn').length && !$target.closest('.savedd').length) {
+            $('.savedd').hide();
+        }
+    });
 
+    $('.load-search__btn').click(function () {
+        $(this).next('.pc-search__dropdown').toggle();
+    })
 
+    $(document).click(function (event) {
+        let $target = $(event.target);
+        if (!$target.closest('.load-search__btn').length && !$target.closest('.loaddd').length) {
+            $('.loaddd').hide();
+        }
+    });
 
+    // add to favorite
+    $('.favorite').click(function () {
+        $(this).toggleClass('active');
+    });
+
+    // card menu
+    $('.menubtn').click(function () {
+        $(this).next('ul').toggleClass('active');
+    });
+
+    // compare button
+    $('.compare-btn').on('click', function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $(this).find('.compare-btn__text').text('Remove Compare');
+        } else {
+            $(this).find('.compare-btn__text').text('Add to Compare');
+        }
+    });
+
+    // QUICK SEARCH
+    $('.minus').click(function () {
+        var $input = $(this).siblings('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 0 ? 0 : count;
+        $input.val(count).change();
+        return false;
+    });
+
+    $('.plus').click(function () {
+        var $input = $(this).siblings('input');
+        $input.val(parseInt($input.val()) + 1).change();
+        return false;
+    });
 
 })

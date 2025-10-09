@@ -16,7 +16,6 @@
 
 <body>
     <div class="pagewrapper">
-
         <header class="header">
             <div class="container position-relative">
                 <div class="row align-items-center justify-content-md-between">
@@ -928,6 +927,12 @@
                                                                 fill="#3656D2" />
                                                         </svg>
                                                     </button>
+                                                    <div class="pc-search__dropdown savedd">
+                                                        <div class="inputfield">
+                                                            <input type="text" placeholder="Enter a Save Name">
+                                                            <button class="pc-search__btn">Save</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                                 <div class="plans-control__wrap">
                                                     <button class="plans-controls__btn load-search__btn  border-brand"
@@ -940,10 +945,28 @@
                                                                 fill="#3656D2" />
                                                         </svg>
                                                     </button>
+                                                    <div class="pc-search__dropdown loaddd">
+                                                        <div class="resultfield">
+                                                            <!-- <p class="noresult">There are no saved searches.</p> -->
+                                                            <div class="resultbox">
+                                                                <p> WINDSONG 3</p>
+                                                                <button class="remove-loadsearch">
+                                                                    <img src="img/index/close.svg" alt="close">
+                                                                </button>
+                                                            </div>
+                                                            <div class="resultbox">
+                                                                <p> RIDGESIDE 14</p>
+                                                                <button class="remove-loadsearch">
+                                                                    <img src="img/index/close.svg" alt="close">
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="plans-control__wrap">
-                                                <button class="plans-controls__btn qsearch-btn  border-brand">
+                                                <button class="plans-controls__btn qsearch-btn border-brand"
+                                                    data-bs-toggle="modal" data-bs-target="#quick-search">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
                                                         viewBox="0 0 21 20" fill="none">
                                                         <path
@@ -989,8 +1012,9 @@
                                             </div>
                                             <div class="plans-control__wrap">
                                                 <div class="toggleviiew d-inline-flex align-items-center">
-                                                    <button class="toggleviiew__btn active rounded-circle" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-title="Show Floorplan view">
+                                                    <button class="toggleviiew__btn active rounded-circle"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        data-bs-title="Show Floorplan view">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                             viewBox="0 0 24 24" fill="none">
                                                             <path
@@ -1001,8 +1025,9 @@
                                                                 fill="white" />
                                                         </svg>
                                                     </button>
-                                                    <button class="toggleviiew__btn rounded-circle" data-bs-toggle="tooltip"
-                                                        data-bs-placement="bottom" data-bs-title="Show Floorplan view">
+                                                    <button class="toggleviiew__btn rounded-circle"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        data-bs-title="Show Floorplan view">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                             viewBox="0 0 24 24" fill="none">
                                                             <g clip-path="url(#clip0_2001_5044)">
@@ -1024,6 +1049,319 @@
                                 </div>
                             </div>
 
+                            <div class="plans-list">
+                                <div class="row">
+
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan1.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p>Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4>
+                                                        <span class="likecount">
+                                                            <img src="img/index/like-icon.svg" alt="icon">
+                                                            <span>5</span>
+                                                        </span>
+                                                        Oakley House
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span>Floor Plan</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Second Floor</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Elevation</span>
+                                                    </li>
+                                                </ul>
+                                                <button class="compare-btn">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan1.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p>Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4>
+                                                        <span class="likecount">
+                                                            <img src="img/index/like-icon.svg" alt="icon">
+                                                            <span>5</span>
+                                                        </span>
+                                                        Oakley House
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div class="plan-iconinfo d-inline-flex align-items-center">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span>Floor Plan</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Second Floor</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>Elevation</span>
+                                                    </li>
+                                                </ul>
+                                                <button class="compare-btn">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none">
+                                                    <path
+                                                        d="M11.7267 12L12.6667 11.06L9.61341 8L12.6667 4.94L11.7267 4L7.72675 8L11.7267 12Z"
+                                                        fill="#333333" />
+                                                    <path
+                                                        d="M7.33344 12L8.27344 11.06L5.2201 8L8.27344 4.94L7.33344 4L3.33344 8L7.33344 12Z"
+                                                        fill="#333333" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none">
+                                                    <path
+                                                        d="M10.06 12L11 11.06L7.94667 8L11 4.94L10.06 4L6.06 8L10.06 12Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><span>...</span></li>
+                                        <li class="page-item"><a class="page-link" href="#">10</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none">
+                                                    <path d="M6.94 4L6 4.94L9.05333 8L6 11.06L6.94 12L10.94 8L6.94 4Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16" fill="none">
+                                                    <path
+                                                        d="M4.27325 4L3.33325 4.94L6.38659 8L3.33325 11.06L4.27325 12L8.27325 8L4.27325 4Z"
+                                                        fill="black" />
+                                                    <path
+                                                        d="M8.66656 4L7.72656 4.94L10.7799 8L7.72656 11.06L8.66656 12L12.6666 8L8.66656 4Z"
+                                                        fill="black" />
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <!-- ================================plans content - end================================ -->
 
                         </div>
                     </div>
@@ -1079,6 +1417,77 @@
     </div>
 
 
+    <!-- QUICK SEARCH MODAL -->
+
+    <div class="modal fade modal-md" id="quick-search" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-sm-5 p-4">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="img/general/close-modal.svg" alt="close">
+                </button>
+                <p class="qs-title text-center color-brand fw-medium mb-xl-4 mb-md-2">Quick Search</p>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="qsbox text-center">
+                            <p class="mb-xl-3 mb-2 fw-medium">Floors/Levels</p>
+                            <img class="mb-xl-3 mb-2" src="img/index/qsearch-ic1.svg" alt="img">
+                            <div class="countbox d-flex align-items-center">
+                                <span
+                                    class="minus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/minus.svg" alt="minus"></span>
+                                <input type="text" value="1" class="bg-transparent border-0 text-center" />
+                                <span
+                                    class="plus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/plus.svg" alt="minus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="qsbox text-center">
+                            <p class="mb-xl-3 mb-2 fw-medium">Bedrooms</p>
+                            <img class="mb-xl-3 mb-2" src="img/index/qsearch-ic2.svg" alt="img">
+                            <div class="countbox d-flex align-items-center">
+                                <span
+                                    class="minus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/minus.svg" alt="minus"></span>
+                                <input type="text" value="1" class="bg-transparent border-0 text-center" />
+                                <span
+                                    class="plus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/plus.svg" alt="minus"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="qsbox text-center">
+                            <p class="mb-xl-3 mb-2 fw-medium">Bathroom</p>
+                            <img class="mb-xl-3 mb-2" src="img/index/qsearch-ic3.svg" alt="img">
+                            <div class="countbox d-flex align-items-center">
+                                <span
+                                    class="minus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/minus.svg" alt="minus"></span>
+                                <input type="text" value="1" class="bg-transparent border-0 text-center" />
+                                <span
+                                    class="plus bg-brand rounded-circle d-inline-flex align-items-center justify-content-center"><img
+                                        src="img/index/plus.svg" alt="minus"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-brand mb-3">
+                    Browse 86 matching Plams
+                </a>
+                <button class="btn white-btn blue-border mb-2" data-bs-dismiss="modal" aria-label="Close">
+                    No, thanks
+                </button>
+                <a href="#" class="qsearch-showall text-center color-brand">
+                    Show me all <span>6226</span> Plans
+                </a>
+
+            </div>
+        </div>
+    </div>
 
     <script src="js/lib/jquery.js"></script>
     <script src="js/lib/bootstrap.bundle.min.js"></script>

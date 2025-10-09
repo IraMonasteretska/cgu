@@ -195,8 +195,8 @@ input[type=number] {
     }
 
     &.btn_blue {
-        background: #5353E8;
-        border: 1px solid #5353E8;
+        background: $brand-color;
+        border: 1px solid $brand-color;
         color: #fff;
     }
 
@@ -234,7 +234,6 @@ input[type=number] {
     transition: 0.3s;
     border-radius: 10px;
     text-decoration: none;
-
 
     &:hover {
         background: #fff;
