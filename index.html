@@ -16,6 +16,26 @@
 
 <body>
     <div class="pagewrapper">
+        <div class="notification-banner">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center position-relative pe-lg-4 pe-5">
+                    <p class="m-0">
+                        <span class="color-brand">Not finding a plan you are looking for?</span> See more plans from our
+                        parenting design
+                    </p>
+                    <div class="notification-banner__btn d-flex align-items-center justify-content-between">
+                        <img src="img/general/arrow-top.svg" alt="icon">
+                        <a href="#"
+                            class="plans-btn color-brand border-brand d-inline-flex align-items-center justify-content-center text-decoration-none">See
+                            plans</a>
+                    </div>
+                    <div class="close">
+                        <img src="img/general/close-modal.svg" alt="close">
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <header class="header">
             <div class="container position-relative">
                 <div class="row align-items-center justify-content-md-between">
@@ -982,14 +1002,18 @@
                                             class="plans-control__group d-inline-flex align-items-center order-lg-2 order-3">
                                             <div class="plans-control__wrap me-md-0 me-3">
                                                 <div class="switch-box">
-                                                    <input type="checkbox" id="switch1" checked>
+                                                    <input type="checkbox" id="switch1">
                                                     <label for="switch1">Toggle</label>
-                                                    <p class="fw-medium">Compare</p>
+                                                    <p class="fw-medium compare-text">Compare</p>
+                                                    <a href="#"
+                                                        class="compareplans-link mb-0 fw-medium color-brand ms-2">Compare
+                                                        <span>2</span>
+                                                        plans</a>
                                                 </div>
                                             </div>
                                             <div class="plans-control__wrap  me-md-0 me-3">
                                                 <div class="switch-box">
-                                                    <input type="checkbox" id="switch2" checked>
+                                                    <input type="checkbox" id="switch2">
                                                     <label for="switch2">Toggle</label>
                                                     <p class="fw-medium">Summary</p>
                                                 </div>
@@ -1093,7 +1117,8 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#">
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
                                                                 <span class="iconfont icon-message"></span>
                                                                 Ask the Designer
                                                             </a>
@@ -1132,7 +1157,7 @@
                                                             <img src="img/index/like-icon.svg" alt="icon">
                                                             <span>5</span>
                                                         </span>
-                                                        Oakley House
+                                                        <a href="#">Oakley House</a>
                                                     </h4>
                                                     <p class="floors">1 Floors</p>
                                                 </div>
@@ -1168,16 +1193,717 @@
                                                     class="floorslist d-flex flex-wrap align-items-center justify-content-around">
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Second
                                                             Floor</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
-                                                       
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button
+                                                    class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan2.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4 class="fw-medium m-0">
+                                                        <a href="#">Oakley House</a>
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Second
+                                                            Floor</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button
+                                                    class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan3.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4 class="fw-medium m-0">
+                                                        <a href="#">Oakley House</a>
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Second
+                                                            Floor</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button
+                                                    class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan4.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4 class="fw-medium m-0">
+                                                        <a href="#">Oakley House</a>
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Second
+                                                            Floor</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button
+                                                    class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan5.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4 class="fw-medium m-0">
+                                                        <a href="#">Oakley House</a>
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Second
+                                                            Floor</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <button
+                                                    class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                    <span class="compare-btn__icon"></span>
+                                                    <span class="compare-btn__text">Add to Compare</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-4 col-md-6">
+                                        <div class="plan-card">
+                                            <div class="plan-card__imgbox">
+                                                <a href="#">
+                                                    <img src="img/index/plan6.jpg" alt="plan">
+                                                </a>
+                                                <div class="top_status">
+                                                    <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                    <button class="favorite">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                            viewBox="0 0 24 24" fill="none">
+                                                            <path
+                                                                d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                stroke-width="1.5" stroke-linecap="round"
+                                                                stroke-linejoin="round" />
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="plan-card__badges">
+                                                    <span class="badge badge--sale">10% of sale</span>
+                                                    <span class="badge badge--new">New</span>
+                                                    <span class="badge badge--popular">Popular</span>
+                                                </div>
+                                                <div class="plan-card__menu">
+                                                    <button class="menubtn">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16" fill="none">
+                                                            <path
+                                                                d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                fill="black" />
+                                                        </svg>
+                                                    </button>
+                                                    <ul class="plan-card__menulist">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-edit"></span>
+                                                                Modify Plan
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
+                                                                <span class="iconfont icon-message"></span>
+                                                                Ask the Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-user"></span>
+                                                                Plans by Designer
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-letter"></span>
+                                                                Email a Friend
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-loupe"></span>
+                                                                Plan Details
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="iconfont icon-card"></span>
+                                                                Purchase Plan
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="plan-card__body">
+                                                <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                    <h4 class="fw-medium m-0">
+                                                        <a href="#">Oakley House</a>
+                                                    </h4>
+                                                    <p class="floors">1 Floors</p>
+                                                </div>
+                                                <div
+                                                    class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bed-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        4
+                                                        <img src="img/index/bath-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/garage-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        2
+                                                        <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                    </div>
+                                                    <div
+                                                        class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                        3,295 SqFt
+                                                        <img src="img/index/sqft.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <ul
+                                                    class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Second
+                                                            Floor</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                 </ul>
                                                 <button
@@ -1229,7 +1955,8 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#">
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
                                                                 <span class="iconfont icon-message"></span>
                                                                 Ask the Designer
                                                             </a>
@@ -1264,7 +1991,11 @@
                                             <div class="plan-card__body">
                                                 <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
                                                     <h4 class="fw-medium m-0">
-                                                        Oakley House
+                                                        <span class="likecount">
+                                                            <img src="img/index/like-icon.svg" alt="icon">
+                                                            <span>5</span>
+                                                        </span>
+                                                        <a href="#">Oakley House</a>
                                                     </h4>
                                                     <p class="floors">1 Floors</p>
                                                 </div>
@@ -1300,16 +2031,22 @@
                                                     class="floorslist d-flex flex-wrap align-items-center justify-content-around">
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Second
                                                             Floor</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
-                                                       
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                 </ul>
                                                 <button
@@ -1324,7 +2061,7 @@
                                         <div class="plan-card">
                                             <div class="plan-card__imgbox">
                                                 <a href="#">
-                                                    <img src="img/index/plan1.jpg" alt="plan">
+                                                    <img src="img/index/plan2.jpg" alt="plan">
                                                 </a>
                                                 <div class="top_status">
                                                     <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
@@ -1361,7 +2098,8 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#">
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
                                                                 <span class="iconfont icon-message"></span>
                                                                 Ask the Designer
                                                             </a>
@@ -1396,7 +2134,7 @@
                                             <div class="plan-card__body">
                                                 <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
                                                     <h4 class="fw-medium m-0">
-                                                        Oakley House
+                                                        <a href="#">Oakley House</a>
                                                     </h4>
                                                     <p class="floors">1 Floors</p>
                                                 </div>
@@ -1432,16 +2170,22 @@
                                                     class="floorslist d-flex flex-wrap align-items-center justify-content-around">
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Second
                                                             Floor</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                 </ul>
                                                 <button
@@ -1456,7 +2200,7 @@
                                         <div class="plan-card">
                                             <div class="plan-card__imgbox">
                                                 <a href="#">
-                                                    <img src="img/index/plan1.jpg" alt="plan">
+                                                    <img src="img/index/plan3.jpg" alt="plan">
                                                 </a>
                                                 <div class="top_status">
                                                     <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
@@ -1493,7 +2237,8 @@
                                                             </a>
                                                         </li>
                                                         <li>
-                                                            <a href="#">
+                                                            <a href="#" data-bs-toggle="modal"
+                                                                data-bs-target="#askdesigner">
                                                                 <span class="iconfont icon-message"></span>
                                                                 Ask the Designer
                                                             </a>
@@ -1528,7 +2273,7 @@
                                             <div class="plan-card__body">
                                                 <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
                                                     <h4 class="fw-medium m-0">
-                                                        Oakley House
+                                                        <a href="#">Oakley House</a>
                                                     </h4>
                                                     <p class="floors">1 Floors</p>
                                                 </div>
@@ -1564,16 +2309,22 @@
                                                     class="floorslist d-flex flex-wrap align-items-center justify-content-around">
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Floor Plan</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Second
                                                             Floor</span>
-                                                        
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                     <li>
                                                         <span class="plan-ttbtn fw-medium color-brand">Elevation</span>
-                                                       
+                                                        <div class="plan-tooltip">
+                                                            <img src="img/index/plan-img.png" alt="img">
+                                                        </div>
                                                     </li>
                                                 </ul>
                                                 <button
@@ -1584,7 +2335,6 @@
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                                 <nav aria-label="Page navigation example">
                                     <ul class="pagination">
@@ -1611,7 +2361,7 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item "><a class="page-link active" href="#">1</a></li>
                                         <li class="page-item"><a class="page-link" href="#">2</a></li>
                                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                                         <li class="page-item"><span>...</span></li>
@@ -1642,24 +2392,621 @@
                                 </nav>
                             </div>
                             <!-- ================================plans content - end================================ -->
+                            <!-- ================================plans slider================================ -->
+                            <div class="plans-slider">
+                                <h2>Recently viwed</h2>
+                                <div class="swiper recently-plans">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="plan-card">
+                                                <div class="plan-card__imgbox">
+                                                    <a href="#">
+                                                        <img src="img/index/plan1.jpg" alt="plan">
+                                                    </a>
+                                                    <div class="top_status">
+                                                        <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                        <button class="favorite">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                    fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                    stroke-width="1.5" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="plan-card__badges">
+                                                        <span class="badge badge--sale">10% of sale</span>
+                                                        <span class="badge badge--new">New</span>
+                                                        <span class="badge badge--popular">Popular</span>
+                                                    </div>
+                                                    <div class="plan-card__menu">
+                                                        <button class="menubtn">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none">
+                                                                <path
+                                                                    d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="plan-card__menulist">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-edit"></span>
+                                                                    Modify Plan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#askdesigner">
+                                                                    <span class="iconfont icon-message"></span>
+                                                                    Ask the Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-user"></span>
+                                                                    Plans by Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-letter"></span>
+                                                                    Email a Friend
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-loupe"></span>
+                                                                    Plan Details
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-card"></span>
+                                                                    Purchase Plan
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="plan-card__body">
+                                                    <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                        <h4 class="fw-medium m-0">
+                                                            <span class="likecount">
+                                                                <img src="img/index/like-icon.svg" alt="icon">
+                                                                <span>5</span>
+                                                            </span>
+                                                            <a href="#">Oakley House</a>
+                                                        </h4>
+                                                        <p class="floors">1 Floors</p>
+                                                    </div>
+                                                    <div
+                                                        class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bed-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bath-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/garage-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            3,295 SqFt
+                                                            <img src="img/index/sqft.svg" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <ul
+                                                        class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Floor
+                                                                Plan</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Second
+                                                                Floor</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span
+                                                                class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <button
+                                                        class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                        <span class="compare-btn__icon"></span>
+                                                        <span class="compare-btn__text">Add to Compare</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="plan-card">
+                                                <div class="plan-card__imgbox">
+                                                    <a href="#">
+                                                        <img src="img/index/plan1.jpg" alt="plan">
+                                                    </a>
+                                                    <div class="top_status">
+                                                        <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                        <button class="favorite">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                    fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                    stroke-width="1.5" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="plan-card__badges">
+                                                        <span class="badge badge--sale">10% of sale</span>
+                                                        <span class="badge badge--new">New</span>
+                                                        <span class="badge badge--popular">Popular</span>
+                                                    </div>
+                                                    <div class="plan-card__menu">
+                                                        <button class="menubtn">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none">
+                                                                <path
+                                                                    d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="plan-card__menulist">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-edit"></span>
+                                                                    Modify Plan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#askdesigner">
+                                                                    <span class="iconfont icon-message"></span>
+                                                                    Ask the Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-user"></span>
+                                                                    Plans by Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-letter"></span>
+                                                                    Email a Friend
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-loupe"></span>
+                                                                    Plan Details
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-card"></span>
+                                                                    Purchase Plan
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="plan-card__body">
+                                                    <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                        <h4 class="fw-medium m-0">
+                                                            <span class="likecount">
+                                                                <img src="img/index/like-icon.svg" alt="icon">
+                                                                <span>5</span>
+                                                            </span>
+                                                            <a href="#">Oakley House</a>
+                                                        </h4>
+                                                        <p class="floors">1 Floors</p>
+                                                    </div>
+                                                    <div
+                                                        class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bed-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bath-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/garage-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            3,295 SqFt
+                                                            <img src="img/index/sqft.svg" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <ul
+                                                        class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Floor
+                                                                Plan</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Second
+                                                                Floor</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span
+                                                                class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <button
+                                                        class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                        <span class="compare-btn__icon"></span>
+                                                        <span class="compare-btn__text">Add to Compare</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="plan-card">
+                                                <div class="plan-card__imgbox">
+                                                    <a href="#">
+                                                        <img src="img/index/plan1.jpg" alt="plan">
+                                                    </a>
+                                                    <div class="top_status">
+                                                        <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                        <button class="favorite">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                    fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                    stroke-width="1.5" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="plan-card__badges">
+                                                        <span class="badge badge--sale">10% of sale</span>
+                                                        <span class="badge badge--new">New</span>
+                                                        <span class="badge badge--popular">Popular</span>
+                                                    </div>
+                                                    <div class="plan-card__menu">
+                                                        <button class="menubtn">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none">
+                                                                <path
+                                                                    d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="plan-card__menulist">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-edit"></span>
+                                                                    Modify Plan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#askdesigner">
+                                                                    <span class="iconfont icon-message"></span>
+                                                                    Ask the Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-user"></span>
+                                                                    Plans by Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-letter"></span>
+                                                                    Email a Friend
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-loupe"></span>
+                                                                    Plan Details
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-card"></span>
+                                                                    Purchase Plan
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="plan-card__body">
+                                                    <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                        <h4 class="fw-medium m-0">
+                                                            <span class="likecount">
+                                                                <img src="img/index/like-icon.svg" alt="icon">
+                                                                <span>5</span>
+                                                            </span>
+                                                            <a href="#">Oakley House</a>
+                                                        </h4>
+                                                        <p class="floors">1 Floors</p>
+                                                    </div>
+                                                    <div
+                                                        class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bed-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bath-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/garage-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            3,295 SqFt
+                                                            <img src="img/index/sqft.svg" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <ul
+                                                        class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Floor
+                                                                Plan</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Second
+                                                                Floor</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span
+                                                                class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <button
+                                                        class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                        <span class="compare-btn__icon"></span>
+                                                        <span class="compare-btn__text">Add to Compare</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="plan-card">
+                                                <div class="plan-card__imgbox">
+                                                    <a href="#">
+                                                        <img src="img/index/plan1.jpg" alt="plan">
+                                                    </a>
+                                                    <div class="top_status">
+                                                        <p class="fw-medium m-0 text-white">Hudson Home Design Plan</p>
+                                                        <button class="favorite">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                height="24" viewBox="0 0 24 24" fill="none">
+                                                                <path
+                                                                    d="M6.80556 1.5C3.59967 1.5 1 4.29176 1 7.73453C1 14.625 12 22.5 12 22.5C12 22.5 23 14.625 23 7.73453C23 3.46906 20.4003 1.5 17.1944 1.5C14.9211 1.5 12.9533 2.90329 12 4.94647C11.0467 2.90329 9.07889 1.5 6.80556 1.5Z"
+                                                                    fill="#82829F" fill-opacity="0.2" stroke="white"
+                                                                    stroke-width="1.5" stroke-linecap="round"
+                                                                    stroke-linejoin="round" />
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="plan-card__badges">
+                                                        <span class="badge badge--sale">10% of sale</span>
+                                                        <span class="badge badge--new">New</span>
+                                                        <span class="badge badge--popular">Popular</span>
+                                                    </div>
+                                                    <div class="plan-card__menu">
+                                                        <button class="menubtn">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" viewBox="0 0 16 16" fill="none">
+                                                                <path
+                                                                    d="M3.33333 6.66663C2.6 6.66663 2 7.26663 2 7.99996C2 8.73329 2.6 9.33329 3.33333 9.33329C4.06667 9.33329 4.66667 8.73329 4.66667 7.99996C4.66667 7.26663 4.06667 6.66663 3.33333 6.66663ZM12.6667 6.66663C11.9333 6.66663 11.3333 7.26663 11.3333 7.99996C11.3333 8.73329 11.9333 9.33329 12.6667 9.33329C13.4 9.33329 14 8.73329 14 7.99996C14 7.26663 13.4 6.66663 12.6667 6.66663ZM8 6.66663C7.26667 6.66663 6.66667 7.26663 6.66667 7.99996C6.66667 8.73329 7.26667 9.33329 8 9.33329C8.73333 9.33329 9.33333 8.73329 9.33333 7.99996C9.33333 7.26663 8.73333 6.66663 8 6.66663Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                        <ul class="plan-card__menulist">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-edit"></span>
+                                                                    Modify Plan
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" data-bs-toggle="modal"
+                                                                    data-bs-target="#askdesigner">
+                                                                    <span class="iconfont icon-message"></span>
+                                                                    Ask the Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-user"></span>
+                                                                    Plans by Designer
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-letter"></span>
+                                                                    Email a Friend
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-loupe"></span>
+                                                                    Plan Details
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <span class="iconfont icon-card"></span>
+                                                                    Purchase Plan
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="plan-card__body">
+                                                    <div class="plan-titlebox d-flex align-items-center px-3 pb-1">
+                                                        <h4 class="fw-medium m-0">
+                                                            <span class="likecount">
+                                                                <img src="img/index/like-icon.svg" alt="icon">
+                                                                <span>5</span>
+                                                            </span>
+                                                            <a href="#">Oakley House</a>
+                                                        </h4>
+                                                        <p class="floors">1 Floors</p>
+                                                    </div>
+                                                    <div
+                                                        class="plan-info d-flex align-items-center justify-content-center flex-wrap">
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bed-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            4
+                                                            <img src="img/index/bath-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/garage-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            2
+                                                            <img src="img/index/washbasin-icon.svg" alt="icon">
+                                                        </div>
+                                                        <div
+                                                            class="plan-iconinfo d-inline-flex align-items-center fw-light">
+                                                            3,295 SqFt
+                                                            <img src="img/index/sqft.svg" alt="icon">
+                                                        </div>
+                                                    </div>
+                                                    <ul
+                                                        class="floorslist d-flex flex-wrap align-items-center justify-content-around">
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Floor
+                                                                Plan</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span class="plan-ttbtn fw-medium color-brand">Second
+                                                                Floor</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <span
+                                                                class="plan-ttbtn fw-medium color-brand">Elevation</span>
+                                                            <div class="plan-tooltip">
+                                                                <img src="img/index/plan-img.png" alt="img">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <button
+                                                        class="compare-btn align-items-center justify-content-center color-brand border-brand">
+                                                        <span class="compare-btn__icon"></span>
+                                                        <span class="compare-btn__text">Add to Compare</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="top-slider__navigation">
+                                        <div class="swiper-button-prev">
+                                            <img src="img/index/slider-left.svg" alt="prev">
+                                        </div>
+                                        <div class="swiper-button-next">
+                                            <img src="img/index/slider-right.svg" alt="next">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ================================plans slider - end================================ -->
 
+                            <!-- ================================BANER================================ -->
+                            <div class="seeplans-section">
+                                <img src="img/index/house.png" alt="img">
+                                <div class="description">
+                                    <h2 class="text-white mb-xxl-3 mb-2 fw-medium">Not finding a plan you are looking
+                                        for?</h2>
+                                    <p class="text-white mb-xxl-3 mb-md-2 mb-3">See more plans from our parenting
+                                        design.</p>
+                                    <a href="#"
+                                        class="seeplans-btn btn btn_white d-inline-flex align-items-center justify-content-center">See
+                                        plans</a>
+                                </div>
+                            </div>
+                            <!-- ================================BANER - end================================ -->
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
-
             </div>
         </main>
 
@@ -1765,6 +3112,79 @@
                     Show me all <span>6226</span> Plans
                 </a>
 
+            </div>
+        </div>
+    </div>
+
+    <!-- ask designer -->
+    <div class="modal fade" id="askdesigner" aria-labelledby="exampleModalLabel" aria-hidden="true" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-custwidth">
+            <div class="modal-content">
+                <button type="button" class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="img/general/close-modal.svg" alt="close">
+                </button>
+
+                <div class="askthedesigner">
+                    <p class="title">
+                        <img src="img/general/message-icon.svg" alt="icon">
+                        Ask the Designer
+                    </p>
+                    <form action="#">
+                        <div class="form-group">
+                            <textarea placeholder="Enter your question(s) for the designer of this plan..."></textarea>
+                        </div>
+                        <div class="file-drop-area">
+                            <span class="fake-btn">
+                                <img src="img/general/attach.svg" alt="icon">
+                                Drag & drop files here or click to browse
+                            </span>
+                            <span class="file-msg">File attachment . help explain your question</span>
+                            <input class="file-input" type="file" multiple id="attachinput">
+                            <label for="attachinput" class="file-input-label"></label>
+                        </div>
+                        <div class="row explain-box">
+                            <div class="col-sm-6">
+                                <p class="explain-title">Need help explaining?</p>
+                            </div>
+                            <div class="col-sm-6 text-sm-end">
+                                <p class="explain-btn">Use Our Modification Tool</p>
+                            </div>
+                        </div>
+                        <div class="uploadfromtel hide">
+                            <button class="hideblock">
+                                <img src="img/general/close-modal.svg" alt="close">
+                            </button>
+                            <p class="uploadfromtel__title">Upload From Your Phone</p>
+                            <div class="form-group">
+                                <input type="number" id="tel" name="tel" placeholder="Enter your Phone number">
+                                <div class="form-group__alert">This field is required.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group mb-sm-0">
+                                        <select name="" id="" class="styledselect askdesselect" data-placeholder="">
+                                            <!-- <option></option> -->
+                                            <option value="1">T-Mobile</option>
+                                            <option value="2">T-Mobile</option>
+                                            <option value="3">T-Mobile</option>
+                                            <option value="4">T-Mobile</option>
+                                            <option value="5">T-Mobile</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button class="sendlink">Send Upload Link</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="modal-btns d-flex flex-wrap align-items-center justify-content-sm-end justify-content-between">
+                            <a href="#" class="white-btn" data-bs-dismiss="modal" aria-label="Close">Cancel</a>
+                            <a href="#" class="btn-blue">Continue</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

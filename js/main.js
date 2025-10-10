@@ -277,17 +277,6 @@ $(document).ready(function () {
         $(this).next('ul').toggleClass('active');
     });
 
-    // compare button
-    $('.compare-btn').on('click', function () {
-        $(this).toggleClass('active');
-
-        if ($(this).hasClass('active')) {
-            $(this).find('.compare-btn__text').text('Remove Compare');
-        } else {
-            $(this).find('.compare-btn__text').text('Add to Compare');
-        }
-    });
-
     // QUICK SEARCH
     $('.minus').click(function () {
         var $input = $(this).siblings('input');
@@ -302,5 +291,92 @@ $(document).ready(function () {
         $input.val(parseInt($input.val()) + 1).change();
         return false;
     });
+
+
+    // Recently viwed
+    if ($('.swiper').length) {
+        var swiper = new Swiper(".recently-plans", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    }
+
+    // compare radio btn
+    $('#switch1').on('change', function () {
+        $('.compare-btn').toggleClass('show', this.checked);
+    });
+
+    // compare button
+    // $('.compare-btn').on('click', function () {
+    //     $(this).toggleClass('active');
+
+    //     if ($(this).hasClass('active')) {
+    //         $(this).find('.compare-btn__text').text('Remove Compare');
+    //     } else {
+    //         $(this).find('.compare-btn__text').text('Add to Compare');
+    //     }
+    // });
+
+
+
+    // $(document).on('click', '.compare-btn', function () {
+    //     $(this).toggleClass('active');
+
+    //     const activeCount = $('.compare-btn.active').length;
+    //     const $compareLink = $('.compareplans-link');
+
+    //     if (activeCount >= 2) {
+    //         $compareLink.addClass('show');
+    //     } else {
+    //         $compareLink.removeClass('show');
+    //     }
+    // });
+
+
+    $('.compare-btn').on('click', function () {
+        $(this).toggleClass('active');
+
+        if ($(this).hasClass('active')) {
+            $(this).find('.compare-btn__text').text('Remove Compare');
+        } else {
+            $(this).find('.compare-btn__text').text('Add to Compare');
+        }
+
+        const activeCount = $('.compare-btn.active').length;
+
+        const $compareLink = $('.compareplans-link');
+
+        if (activeCount >= 2) {
+            $compareLink.addClass('show');
+            $('.compare-text').addClass('hide');
+        } else {
+            $compareLink.removeClass('show');
+            $('.compare-text').removeClass('hide');
+        }
+    });
+
+    // remove notification baner
+    $('.notification-banner .close').click(function () {
+        $('.notification-banner').remove();
+    })
+
+
+
+
 
 })
