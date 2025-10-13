@@ -19,92 +19,88 @@
     font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-attention:before {
+  content: "\e911";
+  color: #3656d2;
+}
 .icon-load-arrow:before {
-    content: "\e90e";
-    color: #3656d2;
+  content: "\e90e";
+  color: #3656d2;
 }
-
 .icon-save-layout:before {
-    content: "\e90f";
-    color: #3656d2;
+  content: "\e90f";
+  color: #3656d2;
 }
-
 .icon-like-1:before {
-    content: "\e907";
-    color: #e1a900;
+  content: "\e907";
+  color: #e1a900;
 }
-
 .icon-mdi_information-outline:before {
-    content: "\e908";
-    color: #3656d2;
+  content: "\e908";
+  color: #3656d2;
 }
-
+.icon-edit1:before {
+  content: "\e910";
+}
+.icon-message1:before {
+  content: "\e912";
+}
 .icon-area:before {
-    content: "\e909";
-    color: #3656d2;
+  content: "\e909";
+  color: #3656d2;
 }
-
 .icon-flip:before {
-    content: "\e90a";
-    color: #3656d2;
+  content: "\e90a";
+  color: #3656d2;
 }
-
 .icon-grid1:before {
-    content: "\e90b";
-    color: #3656d2;
+  content: "\e90b";
+  color: #3656d2;
 }
-
 .icon-view:before {
-    content: "\e90c";
-    color: #3656d2;
+  content: "\e90c";
+  color: #3656d2;
 }
-
 .icon-zoom-in:before {
-    content: "\e90d";
-    color: #3656d2;
+  content: "\e90d";
+  color: #3656d2;
 }
-
 .icon-chat-1:before {
-    content: "\e906";
-    color: #fff;
+  content: "\e906";
+  color: #fff;
 }
-
 .icon-card:before {
-    content: "\e900";
+  content: "\e900";
+  color: #6d9e07;
 }
-
 .icon-edit:before {
-    content: "\e901";
+  content: "\e901";
 }
-
 .icon-letter:before {
-    content: "\e902";
+  content: "\e902";
 }
-
 .icon-loupe:before {
-    content: "\e903";
+  content: "\e903";
 }
-
 .icon-message:before {
-    content: "\e904";
+  content: "\e904";
 }
-
 .icon-user:before {
-    content: "\e905";
+  content: "\e905";
 }

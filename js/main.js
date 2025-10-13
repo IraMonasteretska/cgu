@@ -375,7 +375,27 @@ $(document).ready(function () {
         $('.notification-banner').remove();
     })
 
-
+    // plan details - gallery
+    var swiper = new Swiper(".gallery2", {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        speed: 700
+    });
+    var swiper2 = new Swiper(".gallery1", {
+        loop: true,
+        spaceBetween: 10,
+        speed: 700,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
 
 
 

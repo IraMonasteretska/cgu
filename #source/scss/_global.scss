@@ -8,35 +8,16 @@ $gray-600: #8D8D8D;
 $gray-700: #525252;
 $gray-800: #404040;
 $gray-900: #292929;
-
 $gray-300-1: #D2D5DA;
-
 $blue-600: #2563EB;
-
 $brand-color: #3656D2;
 $brand-color-2: #E1A900;
-
 $blue-500: #4285F4;
 $blue-400: #5D79E6;
 $neutral-900: #0E1735;
-
 $green-900: #6D9E07;
-
 $dark-base: #151515;
-
 $danger: #FF0000;
-
-.text-red {
-    color: $danger !important;
-}
-
-.text-blue {
-    color: $brand-color !important;
-}
-
-.text-green {
-    color: $green-900 !important;
-}
 
 :root {
     scroll-behavior: initial;
@@ -159,9 +140,6 @@ h6 {
 
 }
 
-
-
-
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -198,6 +176,8 @@ input[type=number] {
         background: $brand-color;
         border: 1px solid $brand-color;
         color: #fff;
+
+
     }
 
 }
@@ -297,6 +277,18 @@ input[type=number] {
     }
 }
 
+.text-red {
+    color: $danger !important;
+}
+
+.text-blue {
+    color: $brand-color !important;
+}
+
+.text-green {
+    color: $green-900 !important;
+}
+
 .border-brand {
     border: 1px solid $brand-color;
 }
@@ -327,8 +319,9 @@ input[type=number] {
     border: 1px solid $brand-color;
 
     &:hover {
-        border: 1px solid $brand-color;
-        color: $brand-color;
+        border: 1px solid #4285F4;
+        color: #fff;
+        background: #4285F4;
     }
 }
 
