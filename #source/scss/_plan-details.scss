@@ -1,5 +1,5 @@
 .plandetails-section {
-    padding: 40px 0 90px 0;
+    padding: 40px 0 70px 0;
 
     h2 {
         margin-bottom: 32px;
@@ -184,4 +184,554 @@
 
 .plandetails-cancel {
     min-width: 130px;
+}
+
+.galltext {
+    font-size: 12px;
+    color: $gray;
+    margin: 24px 0 36px;
+}
+
+.tabswrapper {
+    .nav-tabs {
+        display: inline-flex;
+        padding-right: 20px;
+
+        .nav-link {
+            border: none;
+            margin: 0;
+            margin-bottom: -1px;
+            padding: 0;
+            font-weight: 500;
+            color: #333333;
+            padding: 12px 0;
+            border-bottom: 2px solid transparent;
+
+            &.active {
+                color: $brand-color;
+                border-bottom: 2px solid $brand-color;
+            }
+        }
+    }
+
+    .nav-tabs {
+        // border: none;
+    }
+}
+
+.tab-content {
+    padding-top: 32px;
+}
+
+.detlist {
+    li {
+        margin-bottom: 12px;
+        border-bottom: 1px dashed $gray;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        padding-bottom: 4px;
+    }
+}
+
+.detlist-title {
+    color: $gray;
+}
+
+.detlist-descr {
+    color: #181818;
+}
+
+.plandetails__iconlist {
+    span {
+        font-size: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #181818;
+        transition: 0.3s;
+
+        &:hover {
+            color: $brand-color;
+        }
+    }
+}
+
+.sharerow {
+    margin-bottom: 60px;
+
+    .social-list {
+        img {
+            max-width: 32px;
+        }
+
+        li {
+            font-size: 18px;
+        }
+    }
+}
+
+.save-houzz {
+    width: 130px !important;
+
+    img {
+        margin-right: 6px;
+    }
+}
+
+.share-houzz {
+    font-size: 18px;
+}
+
+.plans-navarrows {
+    .navs {
+        max-width: 300px;
+        margin: 0 auto;
+
+        a {
+            span {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}
+
+.planimgs-wrap {
+    img {
+        margin-bottom: 72px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.tabborder-wrap {
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid $gray-light;
+}
+
+.specification-item {
+    height: 100%;
+    min-height: 248px;
+    border: 1px solid $gray-light;
+    border-left: 3px solid $brand-color;
+    padding: 12px 18px 12px 18px;
+
+    ul {
+        width: 100%;
+    }
+
+    li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        color: #181818;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .title {
+        margin-bottom: 4px;
+        color: $gray;
+    }
+
+    .lefttext {
+        width: 100%;
+        max-width: calc(100% - 50px);
+        flex: 0 0 calc(100% - 50px);
+    }
+
+    .righttext {
+        width: 100%;
+        max-width: 50px;
+        flex: 0 0 50px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+.sample-wrap {
+    h4 {
+        margin-bottom: 36px;
+    }
+}
+
+.sampleplan-item {
+    margin-bottom: 36px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .imgwrap {
+        width: 100%;
+        max-width: 280px;
+        flex: 0 0 280px;
+    }
+
+    .description {
+        width: 100%;
+        max-width: calc(100% - 280px);
+        flex: 0 0 calc(100% - 280px);
+        padding-left: 20px;
+
+        h5 {
+            margin-bottom: 12px;
+        }
+
+        p {
+            font-size: 14px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.w-100 {
+            max-width: 100%;
+            flex: 0 0 100%;
+            padding-left: 0;
+        }
+    }
+
+}
+
+.viewsample-btn {
+    width: 172px;
+}
+
+.feedback-wrap {
+    h4 {
+        margin-bottom: 12px;
+    }
+
+
+}
+
+.leave-comment {
+    border-radius: 6px;
+    background: #E5EEE3;
+    padding: 20px 32px;
+    margin-bottom: 36px;
+
+    .highlight__btn {
+        font-size: 16px;
+
+        span {
+            color: $brand-color;
+            font-size: 18px;
+            margin-right: 6px;
+        }
+    }
+}
+
+.btn.feedback-submit {
+    width: 172px;
+}
+
+.recently-plans2 {
+    overflow: initial;
+}
+
+.gallery-wrapper {
+    position: relative;
+}
+
+.plandet-mirrorbtn {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    z-index: 2;
+    border: none !important;
+    width: auto;
+
+    span {
+        font-size: 24px;
+        margin-right: 6px;
+    }
+
+    &:focus {
+        color: #181818;
+
+        span::before {
+            color: #181818;
+        }
+    }
+}
+
+@media(max-width:1599.8px) {
+    .plandetails-ordersettings {
+        h3 {
+            font-size: 21px;
+        }
+    }
+
+    .gallery2 .imgwrap {
+        height: 110px;
+    }
+
+    .sampleplan-item .imgwrap {
+        max-width: 220px;
+        flex: 0 0 220px;
+    }
+
+    .sampleplan-item .description {
+        max-width: calc(100% - 220px);
+        flex: 0 0 calc(100% - 220px);
+    }
+
+    .sidewrapper .radio-field label {
+        font-size: 14px;
+        padding-right: 5px;
+    }
+
+    .ordset-list li p {
+        font-size: 16px;
+    }
+
+    .planselect {
+        max-width: 220px;
+    }
+
+    .sharerow .social-list img {
+        max-width: 28px;
+    }
+
+    .share-houzz {
+        font-size: 16px;
+    }
+
+}
+
+@media(max-width:1399.8px) {
+    .gallery1 .imgwrap {
+        height: 400px;
+    }
+
+    .planselect {
+        max-width: 150px;
+    }
+
+    .leave-comment .highlight__btn {
+        font-size: 14px;
+    }
+
+}
+
+@media(max-width:1199.8px) {
+
+    .gallery1 .imgwrap {
+        height: 340px;
+    }
+
+    .gallery2 .imgwrap {
+        height: 80px;
+    }
+
+    .planselect {
+        max-width: calc(100% - 40px);
+        margin-left: 0;
+    }
+
+    .plans-navarrows .navs {
+        max-width: 260px;
+    }
+
+    .specification-item {
+        min-height: 220px;
+    }
+
+    .sampleplan-item .imgwrap {
+        max-width: 160px;
+        flex: 0 0 160px;
+    }
+
+    .sampleplan-item .description {
+        max-width: calc(100% - 160px);
+        flex: 0 0 calc(100% - 160px);
+    }
+
+}
+
+@media(max-width:991.8px) {
+    .gallery1 .imgwrap {
+        height: 462px;
+    }
+
+    .gallery2 .imgwrap {
+        height: 135px;
+    }
+
+    .galltext {
+        margin: 24px 0;
+    }
+
+    .specification-item {
+        padding: 12px 20px;
+
+        .title {
+            font-size: 16px;
+        }
+    }
+
+    .sampleplan-item .imgwrap {
+        max-width: 240px;
+        flex: 0 0 240px;
+    }
+
+    .sampleplan-item .description {
+        max-width: calc(100% - 240px);
+        flex: 0 0 calc(100% - 240px);
+    }
+
+    .sidewrapper .radio-field label {
+        font-size: 16px;
+    }
+
+    .ordset-list li p {
+        font-size: 18px;
+    }
+
+    .planselect {
+        width: 160px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+    .gallery1 .imgwrap {
+        height: 260px;
+    }
+
+    .gallery2 .imgwrap {
+        height: 80px;
+    }
+
+    .tabswrapper .nav-tabs {
+        border-bottom: none;
+    }
+
+    .tabborder-wrap {
+        padding: 24px;
+    }
+
+    .sampleplan-item .imgwrap {
+        max-width: 160px;
+        flex: 0 0 160px;
+    }
+
+    .sampleplan-item .description {
+        max-width: calc(100% - 160px);
+        flex: 0 0 calc(100% - 160px);
+    }
+
+}
+
+@media(max-width:575.8px) {
+    .plandetails-section h2 {
+        margin-bottom: 8px;
+    }
+
+    .gallery1 .imgwrap {
+        height: 182px;
+    }
+
+    .gallery2 .imgwrap {
+        height: 53px;
+    }
+
+    .galltext {
+        margin: 20px 0;
+    }
+
+    .tabswrapper .nav-tabs .nav-link {
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    .w-xs-100 {
+        width: 100%;
+    }
+
+    .tabborder-wrap {
+        padding: 20px;
+    }
+
+    .planimgs-wrap img {
+        margin-bottom: 40px;
+    }
+
+    .sampleplan-item .imgwrap,
+    .sampleplan-item .description {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .sampleplan-item .imgwrap {
+        margin-bottom: 12px;
+    }
+
+    .sampleplan-item .description {
+        padding-left: 0;
+    }
+
+    .leave-comment {
+        padding: 24px;
+    }
+
+    .sidewrapper .radio-field label {
+        font-size: 14px;
+    }
+
+    .ordset-rightbox {
+        max-width: 90px;
+        flex: 0 0 90px;
+        font-size: 16px;
+    }
+
+    .ordset-list li p {
+        font-size: 16px;
+    }
+
+    .ordset-leftbox {
+        max-width: calc(100% - 90px);
+        flex: 0 0 calc(100% - 90px);
+    }
+
+    .sidewrapper {
+        h5 {
+            font-size: 16px;
+        }
+    }
+
+    .planselect {
+        width: calc(100% + 25px);
+        max-width: calc(100% + 25px);
+    }
+
+    .sett-title .planselect+img {
+        top: 10px;
+    }
+
+    .sharerow {
+        margin-bottom: 48px;
+    }
+
+    .sample-wrap h4 {
+        margin-bottom: 16px;
+        font-size: 18px;
+    }
+
+    .nav-item {
+        margin-bottom: 1px;
+    }
 }

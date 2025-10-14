@@ -229,14 +229,16 @@ $(document).ready(function () {
         $(this).next($('.elements-box')).removeClass('hide');
     });
 
-    $(".js-range-slider2").ionRangeSlider({
-        type: "single",
-        min: 0,
-        max: 100,
-        skin: 'round',
-        hide_from_to: true,
-        hide_min_max: true,
-    });
+    if ($('.js-range-slider2').length) {
+        $(".js-range-slider2").ionRangeSlider({
+            type: "single",
+            min: 0,
+            max: 100,
+            skin: 'round',
+            hide_from_to: true,
+            hide_min_max: true,
+        });
+    }
 
     // toggle view plans
     $('.toggleviiew__btn').click(function () {
@@ -376,27 +378,60 @@ $(document).ready(function () {
     })
 
     // plan details - gallery
-    var swiper = new Swiper(".gallery2", {
-        loop: true,
-        spaceBetween: 20,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-        speed: 700
-    });
-    var swiper2 = new Swiper(".gallery1", {
-        loop: true,
-        spaceBetween: 10,
-        speed: 700,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-        },
-    });
+    if ($('.swiper').length) {
+        var swiper = new Swiper(".gallery2", {
+            loop: true,
+            spaceBetween: 12,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+            speed: 700,
+            breakpoints: {
+                768: {
+                    spaceBetween: 20,
+                },
+            },
+        });
+        var swiper2 = new Swiper(".gallery1", {
+            loop: true,
+            spaceBetween: 10,
+            speed: 700,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    }
 
-
+    // Recently plans - plan detaisl
+    if ($('.swiper').length) {
+        var swiper = new Swiper(".recently-plans2", {
+            slidesPerView: 1,
+            spaceBetween: 24,
+            loop: true,
+            speed: 700,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    }
 
 })
