@@ -181,7 +181,7 @@ input[type=number] {
         &:focus {
             background: #4285F4;
             border-color: #4285F4;
-             color: #fff;
+            color: #fff;
         }
     }
 
@@ -262,6 +262,22 @@ input[type=number] {
 
 .hide {
     display: none;
+}
+
+.border-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 1px solid $brand-color;
+    border-radius: 8px;
+    font-size: 14px;
+    color: $brand-color;
+    transition: 0.3s;
+
+    &:hover {
+        background: #F5F9FF;
+    }
 }
 
 @media(max-width:1399.8px) {
