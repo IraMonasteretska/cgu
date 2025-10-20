@@ -294,7 +294,6 @@ $(document).ready(function () {
         return false;
     });
 
-
     // Recently viwed
     if ($('.swiper').length) {
         var swiper = new Swiper(".recently-plans", {
@@ -324,32 +323,6 @@ $(document).ready(function () {
     });
 
     // compare button
-    // $('.compare-btn').on('click', function () {
-    //     $(this).toggleClass('active');
-
-    //     if ($(this).hasClass('active')) {
-    //         $(this).find('.compare-btn__text').text('Remove Compare');
-    //     } else {
-    //         $(this).find('.compare-btn__text').text('Add to Compare');
-    //     }
-    // });
-
-
-
-    // $(document).on('click', '.compare-btn', function () {
-    //     $(this).toggleClass('active');
-
-    //     const activeCount = $('.compare-btn.active').length;
-    //     const $compareLink = $('.compareplans-link');
-
-    //     if (activeCount >= 2) {
-    //         $compareLink.addClass('show');
-    //     } else {
-    //         $compareLink.removeClass('show');
-    //     }
-    // });
-
-
     $('.compare-btn').on('click', function () {
         $(this).toggleClass('active');
 
@@ -433,5 +406,113 @@ $(document).ready(function () {
             },
         });
     }
+
+
+    if ($('.images-group').length) {
+        document.querySelectorAll('.images-group img').forEach(img => {
+            img.addEventListener('click', () => {
+                const popup = document.querySelector('.img-popup');
+                const popupImg = popup.querySelector('img');
+                popupImg.src = img.src;
+                popup.classList.add('active');
+            });
+        });
+
+        document.querySelector('.img-popup .close').addEventListener('click', () => {
+            document.querySelector('.img-popup').classList.remove('active');
+        });
+
+        document.querySelector('.img-popup').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                e.currentTarget.classList.remove('active');
+            }
+        });
+    }
+
+
+    // message
+    if ($('.attach').length) {
+
+        const attachBtn = document.querySelector('.attach');
+        const fileInput = document.querySelector('#fileInput');
+        const attachedFilesContainer = document.querySelector('.attached-files');
+        const chatSection = document.querySelector('.chat-section');
+
+        let selectedFiles = [];
+
+        attachBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', () => {
+            const files = Array.from(fileInput.files);
+            selectedFiles.push(...files);
+            renderPreviews();
+        });
+
+        // Drag & drop
+        ['dragenter', 'dragover'].forEach(eventName => {
+            chatSection.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                chatSection.classList.add('dragover');
+            });
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            chatSection.addEventListener(eventName, (e) => {
+                e.preventDefault();
+                chatSection.classList.remove('dragover');
+            });
+        });
+
+        chatSection.addEventListener('drop', (e) => {
+            const files = Array.from(e.dataTransfer.files);
+            selectedFiles.push(...files);
+            renderPreviews();
+        });
+
+        function renderPreviews() {
+            attachedFilesContainer.innerHTML = '';
+
+            selectedFiles.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.classList.add('file-item');
+
+                // img
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = e => {
+                        fileItem.innerHTML = `
+          <img src="${e.target.result}" alt="preview">
+          <button class="remove">&times;</button>
+        `;
+                        addRemoveHandler(fileItem, index);
+                    };
+                    reader.readAsDataURL(file);
+                }
+                // not img
+                else {
+                    fileItem.classList.add('non-image');
+                    fileItem.innerHTML = `
+        <span>${file.name}</span>
+        <button class="remove">&times;</button>
+      `;
+                    addRemoveHandler(fileItem, index);
+                }
+
+                attachedFilesContainer.appendChild(fileItem);
+            });
+        }
+
+        function addRemoveHandler(fileItem, index) {
+            fileItem.querySelector('.remove').addEventListener('click', () => {
+                selectedFiles.splice(index, 1);
+                renderPreviews();
+            });
+        }
+
+    }
+
+
 
 })
