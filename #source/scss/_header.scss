@@ -506,7 +506,8 @@ header {
 
 @media(max-width:575.8px) {
     .header__search {
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 10px;
     }
 
     .menu-col {

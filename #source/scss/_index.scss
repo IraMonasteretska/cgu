@@ -438,7 +438,7 @@
     left: 0;
     bottom: 17px;
     width: 100%;
-    z-index: 1;
+    // z-index: 1;
     padding-right: 59px;
     padding-left: 15px;
 
@@ -484,7 +484,7 @@
 
 .plan-card__menu {
     position: absolute;
-    z-index: 2;
+    // z-index: 2;
     bottom: 17px;
     right: 15px;
 
@@ -976,6 +976,10 @@
     }
 }
 
+.irs-handle {
+    z-index: initial !important;
+}
+
 
 @media(max-width:1599.8px) {
     .filter-col {
@@ -1210,6 +1214,7 @@
         width: 340px;
         max-width: 340px;
         flex: 0 0 340px;
+        overflow: auto;
     }
 
     .notification-banner {
@@ -1228,7 +1233,6 @@
         }
 
     }
-
 }
 
 @media(max-width:767.8px) {

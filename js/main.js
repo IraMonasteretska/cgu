@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // password visibility
-    $('.form-group__toggle-password').on('click', function () {
+    $('body').on('click', '.form-group__toggle-password', function () {
         var $input = $(this).siblings('input');
         if ($input.attr('type') === 'password') {
             $input.attr('type', 'text');
@@ -14,13 +14,13 @@ $(document).ready(function () {
     });
 
     // Smooth scroll to top when ".totop" is clicked
-    $('.totop').on('click', function (e) {
+    $('body').on('click', '.totop', function (e) {
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, 600);
     });
 
     // menu btn
-    $('.burger').click(function () {
+    $('body').on('click', '.burger', function () {
         $('.menu-col').toggleClass('active');
         $('.header__overlay').toggleClass('active');
     });
@@ -32,7 +32,7 @@ $(document).ready(function () {
     });
 
     // order list - btns
-    $('.sort-btns button').click(function () {
+    $('body').on('click', '.sort-btns button', function () {
         $('.sort-btns button').removeClass('active');
         $(this).addClass('active');
     })
@@ -86,17 +86,14 @@ $(document).ready(function () {
     }
 
     // show modification tool
-    $('.explain-btn').click(function () {
+    $('body').on('click', '.explain-btn', function () {
         $('.uploadfromtel').removeClass('hide');
         $('.explain-box').hide();
     })
-    $('.uploadfromtel .hideblock').click(function () {
+    $('body').on('click', '.uploadfromtel .hideblock', function () {
         $('.uploadfromtel').addClass('hide');
         $('.explain-box').show();
     })
-
-
-
 
     // enable tooltips
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
@@ -107,15 +104,15 @@ $(document).ready(function () {
     });
 
     // show notifications
-    $('.action--alerts').click(function () {
+    $('body').on('click', '.action--alerts', function () {
         $('.alerts-dropdown').toggleClass('active');
     })
 
-    $('.alerts-dropdown__close').click(function () {
+    $('body').on('click', '.alerts-dropdown__close', function () {
         $('.alerts-dropdown').removeClass('active');
     })
 
-    $('.show-alerts__btn').click(function () {
+    $('body').on('click', '.show-alerts__btn', function () {
         $(this).parents('.alerts__box').find('.alerts-wrap').toggle();
     })
 
@@ -127,27 +124,23 @@ $(document).ready(function () {
     });
 
     // Layout Elements popup
-    $('.layout-result .close-button').click(function () {
+    $('body').on('click', '.layout-result .close-button', function () {
         $('.layout-result').addClass('hide');
     })
-    $('.show-result').click(function () {
+    $('body').on('click', '.show-result', function () {
         $('.layout-result').removeClass('hide');
     })
-
-    $('.plcreate').click(function () {
+    $('body').on('click', '.plcreate', function () {
         $('.planlayout-modal ').fadeIn();
         $('.planlayout-overlay').fadeIn();
     });
-    $('.close-layout').click(function () {
+    $('body').on('click', '.close-layout', function () {
         $('.planlayout-modal ').fadeOut();
         $('.planlayout-overlay').fadeOut();
     })
 
-
-
-
     // filter 
-    $('.filter-btn').click(function () {
+    $('body').on('click', '.filter-btn', function () {
         $('.plans-bodysect').toggleClass('filter-hide');
         $('.showfilter').toggleClass('show');
 
@@ -166,13 +159,12 @@ $(document).ready(function () {
         $('.showfilter').toggleClass('show');
     });
 
-
-    $('.filter-box__title').click(function () {
+    $('body').on('click', '.filter-box__title', function () {
         $(this).toggleClass('open');
         $(this).next('.filter-box__body').slideToggle();
     });
 
-    $('.close-filter').click(function () {
+    $('body').on('click', '.close-filter', function () {
         $('#extra-block').remove();
         $('.plans-bodysect').toggleClass('filter-hide');
     });
@@ -197,7 +189,7 @@ $(document).ready(function () {
         });
     }
 
-    $('.range-slider-input').change(function () {
+    $('body').on('change', '.range-slider-input', function () {
         let inputId = $(this).attr('id');
         let inputValue = $(this).val();
 
@@ -215,13 +207,13 @@ $(document).ready(function () {
     });
 
     // Filter - more btn
-    $('.fiter-more_btn').click(function () {
+    $('body').on('click', '.fiter-more_btn', function () {
         $(this).toggleClass('active');
         $(this).parent('.checkboxes-item').toggleClass('active');
     });
 
     // Layout Elements
-    $('.elements-title').click(function () {
+    $('body').on('click', '.elements-title', function () {
         $('.elements-title').addClass('hide-box');
         $(this).removeClass('hide-box');
 
@@ -241,13 +233,13 @@ $(document).ready(function () {
     }
 
     // toggle view plans
-    $('.toggleviiew__btn').click(function () {
+    $('body').on('click', '.toggleviiew__btn', function () {
         $('.toggleviiew__btn').removeClass('active');
         $(this).addClass('active');
     });
 
     // show search dropdown
-    $('.save-search__btn').click(function () {
+    $('body').on('click', '.save-search__btn', function () {
         $(this).next('.pc-search__dropdown').toggle();
     })
 
@@ -258,7 +250,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.load-search__btn').click(function () {
+    $('body').on('click', '.load-search__btn', function () {
         $(this).next('.pc-search__dropdown').toggle();
     })
 
@@ -270,17 +262,17 @@ $(document).ready(function () {
     });
 
     // add to favorite
-    $('.favorite').click(function () {
+    $('body').on('click', '.favorite', function () {
         $(this).toggleClass('active');
     });
 
     // card menu
-    $('.menubtn').click(function () {
+    $('body').on('click', '.menubtn', function () {
         $(this).next('ul').toggleClass('active');
     });
 
     // QUICK SEARCH
-    $('.minus').click(function () {
+    $('body').on('click', '.minus', function () {
         var $input = $(this).siblings('input');
         var count = parseInt($input.val()) - 1;
         count = count < 0 ? 0 : count;
@@ -288,7 +280,7 @@ $(document).ready(function () {
         return false;
     });
 
-    $('.plus').click(function () {
+    $('body').on('click', '.plus', function () {
         var $input = $(this).siblings('input');
         $input.val(parseInt($input.val()) + 1).change();
         return false;
@@ -318,12 +310,12 @@ $(document).ready(function () {
     }
 
     // compare radio btn
-    $('#switch1').on('change', function () {
+    $('body').on('change', '#switch1', function () {
         $('.compare-btn').toggleClass('show', this.checked);
     });
 
     // compare button
-    $('.compare-btn').on('click', function () {
+    $('body').on('click', '.compare-btn', function () {
         $(this).toggleClass('active');
 
         if ($(this).hasClass('active')) {
@@ -346,7 +338,7 @@ $(document).ready(function () {
     });
 
     // remove notification baner
-    $('.notification-banner .close').click(function () {
+    $('body').on('click', '.notification-banner .close', function () {
         $('.notification-banner').remove();
     })
 
@@ -407,7 +399,6 @@ $(document).ready(function () {
         });
     }
 
-
     if ($('.images-group').length) {
         document.querySelectorAll('.images-group img').forEach(img => {
             img.addEventListener('click', () => {
@@ -428,7 +419,6 @@ $(document).ready(function () {
             }
         });
     }
-
 
     // message
     if ($('.attach').length) {
@@ -512,6 +502,28 @@ $(document).ready(function () {
         }
 
     }
+
+    // test tour
+    $('body').on('click', '.tourbtn', function () {
+        introJs.tour().setOptions({
+            steps: [{
+                intro: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, aspernatur."
+            }, {
+                element: document.querySelector('.plans-btn'),
+                intro: "Lorem ipsum dolor sit amet"
+            },
+            {
+                element: document.querySelector('header .header__search'),
+                intro: "Lorem ipsum dolor sit amet"
+            },
+            {
+                element: document.querySelector('.plan-card'),
+                intro: "Lorem ipsum dolor sit amet"
+            }
+
+            ]
+        }).start();
+    })
 
 
 
