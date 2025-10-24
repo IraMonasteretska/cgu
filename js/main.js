@@ -523,7 +523,8 @@ $(document).ready(function () {
         steps: [
             {
                 title: 'Start the Tour',
-                intro: "This Tour button will help you discover the most popular and helpful features of our site and the tools to find your perfect house plan design."
+                intro: "This Tour button will help you discover the most popular and helpful features of our site and the tools to find your perfect house plan design.",
+                tooltipClass: 'customTooltip'
             },
             {
                 element: document.querySelector('.header__search'),
