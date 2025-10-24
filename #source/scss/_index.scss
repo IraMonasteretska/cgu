@@ -646,6 +646,7 @@
         border-radius: 8px;
         box-shadow: 0px 8px 16px -2px #1B212C1F;
         display: none;
+        text-align: center;
 
         &::after {
             content: '';
@@ -791,6 +792,10 @@
     display: none;
 }
 
+.pagination {
+    border: none !important;
+}
+
 .page-item {
     margin-right: 5px;
 
@@ -819,7 +824,7 @@
         border-radius: 8px;
         border: 1px solid #F1F1F1;
         background: #fff;
-        color: #333333;
+        color: #333333 !important;
         font-size: 13px;
         font-weight: 600;
         box-shadow: none;
@@ -831,7 +836,7 @@
         &:hover,
         &.active {
             background: $brand-color;
-            color: #fff;
+            color: #fff !important;
 
             svg {
                 path {
@@ -961,7 +966,7 @@
         cursor: pointer;
     }
 
-    
+
 }
 
 .plans-btn {
@@ -979,6 +984,42 @@
 .irs-handle {
     z-index: initial !important;
 }
+
+.introjs-tooltip {
+    min-width: 300px;
+}
+
+.customTooltip {
+    min-width: 400px;
+}
+
+.introjs-tooltip-header {
+    padding-top: 20px;
+}
+
+.introjs-tooltipbuttons {
+    .introjs-button {
+        background: $brand-color;
+        text-shadow: none;
+        color: #fff;
+        border-radius: 10px;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        transition: 0.3s;
+
+        &:hover {
+            background: #4285F4;
+            color: #fff;
+        }
+
+        &.introjs-disabled {
+            pointer-events: none;
+            background: #9C9CA3;
+        }
+    }
+}
+
 
 
 @media(max-width:1599.8px) {
@@ -1129,7 +1170,7 @@
         }
     }
 
-    
+
 
 }
 
@@ -1353,7 +1394,7 @@
     }
 
 
-     .notification-banner {
+    .notification-banner {
 
         .pe-5 {
             padding-right: 30px !important;
