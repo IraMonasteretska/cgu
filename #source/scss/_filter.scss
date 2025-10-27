@@ -20,7 +20,8 @@
     border: 1px solid $gray-200;
     border-radius: 100px;
     box-shadow: 0px 1px 2px 0px #1F293714;
-    transition: 0.3s;
+    background: #fff;
+    // transition: 0.3s;
 
     img {
         width: 100%;
@@ -51,8 +52,13 @@
     }
 }
 
-.plans-bodysect.filter-hide {
-    .showfilter {
+// .plans-bodysect.filter-hide {
+//     .showfilter {
+//         display: block;
+//     }
+// }
+.plans-bodysect {
+    .showfilter.show {
         display: block;
     }
 }

@@ -404,6 +404,13 @@ header {
         height: 28px;
     }
 
+    .nav__item {
+        margin-right: 12px;
+    }
+
+    .h-action {
+        margin-left: 20px;
+    }
 }
 
 @media(max-width:1199.8px) {
@@ -430,9 +437,11 @@ header {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 32px;
         height: 32px;
         margin-left: 15px;
+        max-width: 32px;
+        flex: 0 0 32px;
+        width: 100%;
     }
 
     .closemenu {
@@ -494,13 +503,17 @@ header {
 
     .h-action {
         height: auto;
-        margin-left: 15px;
+        margin-left: 8px;
     }
 
     .burger {
         padding: 3px;
         margin-top: 3px;
+        margin-left: 8px;
     }
+
+    
+
 
 }
 
@@ -522,5 +535,15 @@ header {
 
     .nav__link {
         font-weight: 400;
+    }
+
+    .h-action.action-btn .imgwrap,
+    .h-action .imgwrap {
+       width: 24px;
+       height: 24px;
+    }
+
+    .burger {
+        margin-top: 9px;
     }
 }

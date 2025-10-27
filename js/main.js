@@ -99,9 +99,6 @@ $(document).ready(function () {
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-    $('[data-bs-toggle="tooltip"]').tooltip({
-        trigger: 'hover'
-    });
 
     // show notifications
     $('body').on('click', '.action--alerts', function () {
@@ -505,50 +502,50 @@ $(document).ready(function () {
 
     // test tour
     $('body').on('click', '.tourbtn', function () {
-    const isFilterHidden = $('.plans-bodysect').hasClass('filter-hide');
-    const windowWidth = $(window).width();
-    let filterStepElement;
+        const isFilterHidden = $('.plans-bodysect').hasClass('filter-hide');
+        const windowWidth = $(window).width();
+        let filterStepElement;
 
-    if (windowWidth <= 991) {
-        filterStepElement = isFilterHidden
-            ? document.querySelector('.filter')        
-            : document.querySelector('.showfilter');  
-    } else {
-        filterStepElement = isFilterHidden
-            ? document.querySelector('.showfilter')   
-            : document.querySelector('.filter');      
-    }
+        if (windowWidth <= 991) {
+            filterStepElement = isFilterHidden
+                ? document.querySelector('.filter')
+                : document.querySelector('.showfilter');
+        } else {
+            filterStepElement = isFilterHidden
+                ? document.querySelector('.showfilter')
+                : document.querySelector('.filter');
+        }
 
-    introJs().setOptions({
-        steps: [
-            {
-                title: 'Start the Tour',
-                intro: "This Tour button will help you discover the most popular and helpful features of our site and the tools to find your perfect house plan design.",
-                tooltipClass: 'customTooltip'
-            },
-            {
-                element: document.querySelector('.header__search'),
-                title: 'Search or Browse Plans',
-                intro: "Start here by searching or browsing the available plans we have to offer."
-            },
-            {
-                element: filterStepElement,
-                title: 'Filter Plan Search',
-                intro: 'Select from dozens of filters to reduce the search results to exactly what you are looking for.'
-            },
-            {
-                element: document.querySelector('.compare-tour'),
-                title: 'Compare Plans',
-                intro: "The Compare Plans feature lets you select several plans to compare features and details side-by-side."
-            },
-            {
-                element: document.querySelector('.plan-card'),
-                title: 'View Plan Details & Pricing',
-                intro: "Click to see full details, features, and pricing for this plan."
-            }
-        ]
-    }).start();
-});
+        introJs().setOptions({
+            steps: [
+                {
+                    title: 'Start the Tour',
+                    intro: "This Tour button will help you discover the most popular and helpful features of our site and the tools to find your perfect house plan design.",
+                    tooltipClass: 'customTooltip'
+                },
+                {
+                    element: document.querySelector('.header__search'),
+                    title: 'Search or Browse Plans',
+                    intro: "Start here by searching or browsing the available plans we have to offer."
+                },
+                {
+                    element: filterStepElement,
+                    title: 'Filter Plan Search',
+                    intro: 'Select from dozens of filters to reduce the search results to exactly what you are looking for.'
+                },
+                {
+                    element: document.querySelector('.compare-tour'),
+                    title: 'Compare Plans',
+                    intro: "The Compare Plans feature lets you select several plans to compare features and details side-by-side."
+                },
+                {
+                    element: document.querySelector('.plan-card'),
+                    title: 'View Plan Details & Pricing',
+                    intro: "Click to see full details, features, and pricing for this plan."
+                }
+            ]
+        }).start();
+    });
 
 
 
